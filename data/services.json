@@ -67,65 +67,6 @@
         },
         "cat": "editor"
     },
-    "waymarkedtrails": {
-        "name": "Waymarked Trails",
-        "osm_wiki": "Waymarked_Trails",
-        "github": "waymarkedtrails/waymarkedtrails-website",
-        "cat": "thematic",
-        "styles": {
-            "hiking": {
-                "name": "Hiking",
-                "url": "https://hiking.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            },
-            "cycling": {
-                "name": "Cycling",
-                "url": "https://cycling.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            },
-            "mtb": {
-                "name": "MTB",
-                "url": "https://mtb.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            },
-            "riding": {
-                "name": "Horse Riding",
-                "url": "https://riding.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            },
-            "skating": {
-                "name": "Inline Skating",
-                "url": "https://skating.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            },
-            "slopes": {
-                "name": "Winter Sport Slopes",
-                "url": "https://slopes.waymarkedtrails.org/#",
-                "query": {
-                    "map": "{{z}}/{{lat}}/{{lon}}"
-                }
-            }
-        }
-    },
-    "americana": {
-        "name": "OSM Americana",
-        "github": "osm-americana/openstreetmap-americana",
-        "url": "https://americanamap.org/",
-        "hash": {
-            "map": "{{z}}/{{lat}}/{{lon}}"
-        },
-        "cat": "mapstyle"
-    },
     "opentrailmap": {
         "name": "OpenTrailMap",
         "github": "osmus/OpenTrailMap",
@@ -196,6 +137,56 @@
                 "name": "Canoe",
                 "hash": {
                     "mode": "canoe"
+                }
+            }
+        }
+    },
+    "waymarkedtrails": {
+        "name": "Waymarked Trails",
+        "osm_wiki": "Waymarked_Trails",
+        "github": "waymarkedtrails/waymarkedtrails-website",
+        "cat": "thematic",
+        "styles": {
+            "hiking": {
+                "name": "Hiking",
+                "url": "https://hiking.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "cycling": {
+                "name": "Cycling",
+                "url": "https://cycling.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "mtb": {
+                "name": "MTB",
+                "url": "https://mtb.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "riding": {
+                "name": "Horse Riding",
+                "url": "https://riding.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "skating": {
+                "name": "Inline Skating",
+                "url": "https://skating.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "slopes": {
+                "name": "Winter Sport Slopes",
+                "url": "https://slopes.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
                 }
             }
         }
@@ -316,15 +307,6 @@
         },
         "cat": "thematic"
     },
-    "opentopomap": {
-        "name": "OpenTopoMap",
-        "github": "der-stefan/OpenTopoMap",
-        "url": "https://opentopomap.org/",
-        "hash": {
-            "map": "{{z}}/{{lat}}/{{lon}}"
-        },
-        "cat": "mapstyle"
-    },
     "openinframap": {
         "name": "Open Infrastructure Map",
         "github": "openinframap/openinframap",
@@ -333,6 +315,24 @@
             "": "{{z}}/{{lat}}/{{lon}}"
         },
         "cat": "thematic"
+    },
+    "americana": {
+        "name": "OSM Americana",
+        "github": "osm-americana/openstreetmap-americana",
+        "url": "https://americanamap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle"
+    },
+    "opentopomap": {
+        "name": "OpenTopoMap",
+        "github": "der-stefan/OpenTopoMap",
+        "url": "https://opentopomap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle"
     },
     "wikimedia_maps": {
         "name": "Wikimedia Maps",
@@ -376,10 +376,10 @@
         },
         "styles": {
             "tile": {
-                "name": "Flat"
+                "name": "Tile"
             },
             "planet": {
-                "name": "Sphere",
+                "name": "Planet",
                 "query": {
                     "style": "planet"
                 }
@@ -684,7 +684,12 @@
         "hash": {
             "map": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "qa"
+        "cat": "qa",
+        "styles": {
+            "default": {
+                "name": "tiger:reviewed=no"
+            }
+        }
     },
     "osm_then_and_now": {
         "name": "OSM Then and Now",
@@ -837,7 +842,118 @@
         "hash": {
             "map": "{{z}}/{{lat}}/{{lon}}/standard"
         },
-        "cat": "router"
+        "cat": "router",
+        "styles": {
+            "default": {
+                "name": "Trekking bike"
+            },
+            "trekking-ignore-cr": {
+                "name": "TB (ignore cycle routes)",
+                "title": "Trekking bike (ignore cycle routes)",
+                "hash": {
+                    "profile": "trekking-ignore-cr"
+                }
+            },
+            "trekking-steep": {
+                "name": "TB (steep)",
+                "title": "Trekking bike (steep)",
+                "hash": {
+                    "profile": "trekking-steep"
+                }
+            },
+            "trekking-noferries": {
+                "name": "TB (no ferries)",
+                "title": "Trekking bike (no ferries)",
+                "hash": {
+                    "profile": "trekking-noferries"
+                }
+            },
+            "trekking-nosteps": {
+                "name": "TB (no steps)",
+                "title": "Trekking bike (no steps)",
+                "hash": {
+                    "profile": "trekking-nosteps"
+                }
+            },
+            "fastbike": {
+                "name": "Fastbike",
+                "hash": {
+                    "profile": "fastbike"
+                }
+            },
+            "fastbike-lowtraffic": {
+                "name": "Fastbike (low traffic)",
+                "hash": {
+                    "profile": "fastbike-lowtraffic"
+                }
+            },
+            "fastbike-asia-pacific": {
+                "name": "Fastbike (Asia Pacific)",
+                "hash": {
+                    "profile": "fastbike-asia-pacific"
+                }
+            },
+            "vm-forum-liegerad-schnell": {
+                "name": "Recumbent bike (fast)",
+                "hash": {
+                    "profile": "vm-forum-liegerad-schnell"
+                }
+            },
+            "vm-forum-velomobil-schnell": {
+                "name": "Velmobike (fast)",
+                "hash": {
+                    "profile": "vm-forum-velomobil-schnell"
+                }
+            },
+            "safety": {
+                "name": "Safety",
+                "hash": {
+                    "profile": "safety"
+                }
+            },
+            "shortest": {
+                "name": "Shortest",
+                "hash": {
+                    "profile": "shortest"
+                }
+            },
+            "car-eco": {
+                "name": "Car (economic)",
+                "hash": {
+                    "profile": "car-eco"
+                }
+            },
+            "car-fast": {
+                "name": "Car (fast)",
+                "hash": {
+                    "profile": "car-fast"
+                }
+            },
+            "moped": {
+                "name": "Moped",
+                "hash": {
+                    "profile": "moped"
+                }
+            },
+            "rail": {
+                "name": "Rail",
+                "hash": {
+                    "profile": "rail"
+                }
+            },
+            "river": {
+                "name": "River",
+                "hash": {
+                    "profile": "river"
+                }
+            },
+            "hiking-mountain": {
+                "name": "Hiking",
+                "hash": {
+                    "profile": "hiking-mountain"
+                }
+            }
+        }
     },
     "openhistoricalmap": {
         "name": "OpenHistoricalMap",
