@@ -26,7 +26,7 @@ const prefs = {
   showVisited: true,
 }
 
-fetch('/data/services.json')
+fetch('data/services.json')
   .then(response => response.json())
   .then(json => {
     addEventListeners();
@@ -222,9 +222,9 @@ function reloadPage() {
   let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
 
   if (params.z && params.lat && params.lon) {
-    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="/">Clear</a></p>`;
+    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
   } else {
-    descHtml += `<p>You can set a common viewport by setting the URL hash like <code>#map=zoom/lat/lon</code>. <a href="/#map=14/39.952399/-75.163613">Example</a></p>`;
+    descHtml += `<p>You can set a common viewport by setting the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.952399/-75.163613">Example</a></p>`;
   }
   document.getElementById('header-desc').innerHTML = descHtml;
 }
