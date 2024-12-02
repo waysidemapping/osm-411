@@ -196,7 +196,6 @@ function reloadPage() {
 
     for (let i in services) {
       let service = services[i];
-      if (service.hidden) continue;
         
       html += `<li id="${service.id}" class="service">`;
       html += `<span class="service-name">`;
@@ -215,9 +214,9 @@ function reloadPage() {
         html += '<ul class="styles">';
         for (let j in service.styles) {
           let style = service.styles[j];
-          if (style.hidden) continue;
           html += `<li id="${style.id}" class="style">`
-          html+= `<a href="${makeUrl(style)}" ${prefs.targetBlank ? 'target="_blank"' : ''} class="style-name" ${style.title ? 'title="' + style.title + '"' : ''}>`;
+          let url = makeUrl(style);
+          html+= `<a href="${url}" ${prefs.targetBlank ? 'target="_blank"' : ''} class="style-name">`;
           html += style.name;
           html += `</a></li>`;
         }

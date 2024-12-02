@@ -708,15 +708,13 @@
                 }
             },
             "pubtrans_stops": {
-                "name": "PT Stops",
-                "title": "Public Transport Stops",
+                "name": "Public Transport Stops",
                 "query": {
                     "view": "pubtrans_stops"
                 }
             },
             "pubtrans_routes": {
-                "name": "PT Routes",
-                "title": "Public Transport Routes",
+                "name": "Public Transport Routes",
                 "query": {
                     "view": "pubtrans_routes"
                 }
