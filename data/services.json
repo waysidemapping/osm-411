@@ -71,7 +71,7 @@
         "name": "Waymarked Trails",
         "osm_wiki": "Waymarked_Trails",
         "github": "waymarkedtrails/waymarkedtrails-website",
-        "cat": "trail",
+        "cat": "thematic",
         "styles": {
             "hiking": {
                 "name": "Hiking",
@@ -133,7 +133,7 @@
         "hash": {
             "map": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "trail",
+        "cat": "thematic",
         "styles": {
             "all": {
                 "name": "All"
@@ -200,6 +200,25 @@
             }
         }
     },
+    "opencyclemap": {
+        "name": "OpenCycleMap",
+        "url": "https://www.opencyclemap.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "thematic"
+    },
+    "cyclosm": {
+        "name": "CyclOSM",
+        "github": "cyclosm",
+        "url": "https://www.cyclosm.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}/cyclosm"
+        },
+        "cat": "thematic"
+    },
     "openrailwaymap": {
         "name": "OpenRailwayMap",
         "osm_wiki": "OpenRailwayMap",
@@ -261,7 +280,19 @@
         "url": "https://www.opensnowmap.org/",
         "hash": {
             "map": "{{z}}/{{lon}}/{{lat}}",
-            "b": "snowmap"
+            "b": "snowmap",
+            "h": "false"
+        },
+        "styles": {
+            "default": {
+                "name": "Default"
+            },
+            "planet": {
+                "name": "High DPI",
+                "query": {
+                    "h": "true"
+                }
+            }
         },
         "cat": "thematic"
     },
@@ -302,25 +333,6 @@
             "": "{{z}}/{{lat}}/{{lon}}"
         },
         "cat": "thematic"
-    },
-    "opencyclemap": {
-        "name": "OpenCycleMap",
-        "url": "https://www.opencyclemap.org/",
-        "query": {
-            "zoom": "{{z}}",
-            "lat": "{{lat}}",
-            "lon": "{{lon}}"
-        },
-        "cat": "trail"
-    },
-    "cyclosm": {
-        "name": "CyclOSM",
-        "github": "cyclosm",
-        "url": "https://www.cyclosm.org/",
-        "hash": {
-            "map": "{{z}}/{{lat}}/{{lon}}/cyclosm"
-        },
-        "cat": "trail"
     },
     "wikimedia_maps": {
         "name": "Wikimedia Maps",

@@ -16,21 +16,68 @@ let catLabels = {
 };
 
 let allServices;
-let servicesByCat = {};
+const servicesByCat = {};
 
-let params = {
-  z: 10,
-  lat: 41.113709,
-  lon: -74.153544
-};
+const params = {};
+
+// default values, can be changed in UI and saved to localStorage
+const prefs = {
+  targetBlank: true,
+  showVisited: true,
+}
+
+function addEventListeners() {
+  document.getElementById('show-visited').addEventListener('change', function(e) {
+    setPref('showVisited', e.target.checked);
+  });
+  document.getElementById('target-blank').addEventListener('change', function(e) {
+    setPref('targetBlank', e.target.checked);
+  });
+}
+
+function setPref(key, val) {
+  prefs[key] = val;
+  writePrefsToStorage();
+  reloadPage();
+}
+
+function loadPrefsFromStorage() {
+  let storedPrefs = JSON.parse(localStorage.getItem('prefs') || '{}');
+  Object.assign(prefs, storedPrefs);
+}
+
+function writePrefsToStorage() {
+  localStorage.setItem('prefs', JSON.stringify(prefs));
+}
 
 fetch('/data/services.json')
   .then(response => response.json())
   .then(json => {
+    addEventListeners();
+    loadPrefsFromStorage();
+    loadParamsFromUrl();
+
     allServices = json;
     prepareServiceData();
-    loadPage();
+    reloadPage();
   });
+
+function loadParamsFromUrl() {
+  let hashMap = hashValue('map');
+  if (hashMap) {
+    let results = /^([\d\.]+)\/(-?[\d\.]+)\/(-?[\d\.]+)$/.exec(hashMap);
+    if (results.length === 4) {
+      let z = parseFloat(results[1]);
+      let lat = parseFloat(results[2]);
+      let lon = parseFloat(results[3]);
+      if (isFinite(z) && isFinite(lat) && isFinite(lon)) {
+        params.z = z;
+        params.lat = lat;
+        params.lon = lon;
+      }
+    }
+  }
+}
 
 function prepareServiceData() {
   for (let serviceId in allServices) {
@@ -114,7 +161,12 @@ function makeUrl(service) {
   return url;
 }
 
-function loadPage() {
+function reloadPage() {
+
+  document.getElementById('show-visited').checked = prefs.showVisited;
+  document.getElementById('target-blank').checked = prefs.targetBlank;
+
+  prefs.showVisited ? document.body.classList.add('show-visited') : document.body.classList.remove('show-visited');
 
   let html = "";
 
@@ -131,15 +183,15 @@ function loadPage() {
       if (service.hidden) continue;
         
       html += `<li id="${service.id}" class="service">`;
-      if (service.url) html += `<a href="${makeUrl(service)}" target="_blank">`
+      if (service.url) html += `<a href="${makeUrl(service)}" ${prefs.targetBlank ? 'target="_blank"' : ''}>`
       html += `<span class="service-name">${service.name}</span>`;
       if (service.parentName) {
         html += ' on ' + service.parentName;
       }
       if (service.url) html += `</a>`;
       html += `<span class="icon-links">`;
-      if (service.github) html += `<a href="https://github.com/${service.github}" target="_blank"><img src="/img/github.svg"/></a>`;
-      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" target="_blank"><img src="/img/gitlab.svg"/></a>`;
+      if (service.github) html += `<a href="https://github.com/${service.github}" ${prefs.targetBlank ? 'target="_blank"' : ''}><img src="/img/github.svg"/></a>`;
+      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" ${prefs.targetBlank ? 'target="_blank"' : ''}><img src="/img/gitlab.svg"/></a>`;
       html += `</span>`;
       if (service.styles) {
         html += '<ul class="styles">';
@@ -147,7 +199,7 @@ function loadPage() {
           let style = service.styles[j];
           if (style.hidden) continue;
           html += `<li id="${style.id}" class="style">`
-          html+= `<a href="${makeUrl(style)}" target="_blank" class="style-name" ${style.title ? 'title="' + style.title + '"' : ''}>`;
+          html+= `<a href="${makeUrl(style)}" ${prefs.targetBlank ? 'target="_blank"' : ''} class="style-name" ${style.title ? 'title="' + style.title + '"' : ''}>`;
           html += style.name;
           html += `</a></li>`;
         }

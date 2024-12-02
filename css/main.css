@@ -6,7 +6,11 @@ a {
   text-decoration: none;
   color: #005da9;
 }
-a:hover {
+body.show-visited a:visited {
+  color: #8714b0;
+}
+
+a:hover, a:focus {
   text-decoration: underline;
 }
 
@@ -48,7 +52,7 @@ h2 {
 .service-name {
   font-weight: bold;
 }
-.style-name {
+a.style-name {
   font-size: 11px;
   font-weight: bold;
   background: #005da9;
@@ -58,6 +62,10 @@ h2 {
   padding: 2px;
   border-radius: 3px;
   display: inline-block;
+}
+body.show-visited a.style-name:visited {
+  background: #8714b0;
+  color: white;
 }
 
 .icon-links {
@@ -69,11 +77,15 @@ h2 {
 .icon-links a {
   opacity: 0.65;
 }
-.icon-links a:hover {
+.icon-links a:hover, .icon-links a:focus {
   opacity: 1;
 }
 
 #footer {
   margin: 96px 12px 48px 12px;
   text-align: center;
+}
+
+#settings {
+  margin-bottom: 24px;
 }

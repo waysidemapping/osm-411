@@ -52,3 +52,6 @@ b, strong {
 i {
   font-style: italic;
 }
+input, label {
+  cursor: pointer;
+}
