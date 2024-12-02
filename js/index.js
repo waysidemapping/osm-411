@@ -81,9 +81,6 @@ function mapParamsFromUrl() {
           lat: lat,
           lon: lon
         };
-        params.z = z;
-        params.lat = lat;
-        params.lon = lon;
       }
     }
   }
@@ -136,10 +133,12 @@ function makeUrl(service) {
 
   function replaceTokens(val) {
     for (let paramKey in params) {
-      let token = '{{' + paramKey + '}}';
-      if (val.includes(token)) {
-        let paramVal = params[paramKey];
-        val = val.replaceAll(token, paramVal);
+      let paramVal = params[paramKey];
+      if (typeof(paramVal) !== "undefined" && paramVal !== null) {
+        let token = '{{' + paramKey + '}}';
+        if (val.includes(token)) {
+          val = val.replaceAll(token, paramVal);
+        }
       }
     }
     return val;
