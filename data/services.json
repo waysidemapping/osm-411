@@ -599,7 +599,7 @@
         "cat": "streetlevel",
         "styles": {
             "default": {
-                "name": "Default",
+                "name": "Classic",
                 "hash": {
                     "theme": "default"
                 }
