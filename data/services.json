@@ -354,6 +354,65 @@
         },
         "cat": "mapstyle"
     },
+    "maptiler": {
+        "name": "MapTiler",
+        "github": "maptiler",
+        "url": "https://www.maptiler.com/maps/",
+        "hash": {
+            "position": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle",
+        "styles": {
+            "streets": {
+                "name": "Streets",
+                "hash": {
+                    "style": "streets-v2"
+                }
+            },
+            "hybrid": {
+                "name": "Satellite",
+                "hash": {
+                    "style": "hybrid"
+                }
+            },
+            "basic": {
+                "name": "Basic",
+                "hash": {
+                    "style": "basic-v2"
+                }
+            },
+            "dataviz-dark": {
+                "name": "Dark",
+                "hash": {
+                    "style": "dataviz-dark"
+                }
+            },
+            "dataviz-light": {
+                "name": "Light",
+                "hash": {
+                    "style": "dataviz-light"
+                }
+            },
+            "outdoor": {
+                "name": "Outdoor",
+                "hash": {
+                    "style": "outdoor-v2"
+                }
+            },
+            "winter": {
+                "name": "Winter",
+                "hash": {
+                    "style": "winter-v2"
+                }
+            },
+            "dataviz": {
+                "name": "Dataviz",
+                "hash": {
+                    "style": "dataviz"
+                }
+            }
+        }
+    },
     "osm_buildings": {
         "name": "OSM Buildings",
         "github": "OSMBuildings/OSMBuildings",
