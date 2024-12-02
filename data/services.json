@@ -13,6 +13,18 @@
                     "layers": "O"
                 }
             },
+            "y": {
+                "name": "CyclOSM",
+                "hash": {
+                    "layers": "Y"
+                }
+            },
+            "c": {
+                "name": "Cycle Map",
+                "hash": {
+                    "layers": "C"
+                }
+            },
             "t": {
                 "name": "Transport Map",
                 "hash": {
