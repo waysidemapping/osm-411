@@ -67,7 +67,7 @@ function writePrefsToStorage() {
   localStorage.setItem('prefs', JSON.stringify(prefs));
 }
 
-function loadParamsFromUrl() {
+function mapParamsFromUrl() {
   let hashMap = hashValue('map');
   if (hashMap) {
     let results = /^([\d\.]+)\/(-?[\d\.]+)\/(-?[\d\.]+)$/.exec(hashMap);
