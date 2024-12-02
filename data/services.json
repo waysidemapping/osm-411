@@ -703,6 +703,15 @@
             }
         }
     },
+    "geoscribble": {
+        "name": "GeoScribble",
+        "github": "Zverik/geoscribble",
+        "url": " https://geoscribble.osmz.ru/map",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa"
+    },
     "osm_then_and_now": {
         "name": "OSM Then and Now",
         "github": "mvexel/thenandnow",
