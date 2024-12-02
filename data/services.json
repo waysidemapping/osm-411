@@ -964,29 +964,25 @@
                 "name": "Trekking bike"
             },
             "trekking-ignore-cr": {
-                "name": "TB (ignore cycle routes)",
-                "title": "Trekking bike (ignore cycle routes)",
+                "name": "Trekking bike (ignore cycle routes)",
                 "hash": {
                     "profile": "trekking-ignore-cr"
                 }
             },
             "trekking-steep": {
-                "name": "TB (steep)",
-                "title": "Trekking bike (steep)",
+                "name": "Trekking bike (steep)",
                 "hash": {
                     "profile": "trekking-steep"
                 }
             },
             "trekking-noferries": {
-                "name": "TB (no ferries)",
-                "title": "Trekking bike (no ferries)",
+                "name": "Trekking bike (no ferries)",
                 "hash": {
                     "profile": "trekking-noferries"
                 }
             },
             "trekking-nosteps": {
-                "name": "TB (no steps)",
-                "title": "Trekking bike (no steps)",
+                "name": "Trekking bike (no steps)",
                 "hash": {
                     "profile": "trekking-nosteps"
                 }
