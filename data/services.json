@@ -819,6 +819,35 @@
             }
         }
     },
+    "osm_org_changesets": {
+        "name": "OpenStreetMap.org Changesets",
+        "github": "openstreetmap/openstreetmap-website",
+        "url": "https://www.openstreetmap.org/history",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "changeset"
+    },
+    "latest_changes": {
+        "name": "Latest Changes",
+        "github": "rene78/latest-changes",
+        "url": "https://rene78.github.io/latest-changes/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "changeset"
+    },
+    "achavi": {
+        "name": "Achavi",
+        "github": "nrenner/achavi",
+        "url": "https://overpass-api.de/achavi/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "changeset"
+    },
     "maputnik": {
         "name": "Maputnik",
         "github": "maplibre/maputnik",

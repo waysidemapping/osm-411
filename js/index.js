@@ -2,6 +2,7 @@ let catLabels = {
   "3d": "3D Viewers",
   "aerial": "Aerial Imagery Sources",
   "carto": "Cartography Inspectors",
+  "changeset": "Changeset Viewers",
   "editor": "Editors",
   "general": "General",
   "indoor": "Indoor Viewers",
