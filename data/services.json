@@ -89,7 +89,7 @@
         "cat": "thematic",
         "styles": {
             "all": {
-                "name": "All"
+                "name": "All Trails"
             },
             "foot": {
                 "name": "Hiking",
@@ -122,7 +122,7 @@
                 }
             },
             "horse": {
-                "name": "Horse",
+                "name": "Horseback Riding",
                 "hash": {
                     "mode": "horse"
                 }

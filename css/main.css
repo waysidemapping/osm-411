@@ -85,24 +85,20 @@ p {
 .styles {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2px;
 }
 .service-name {
   font-weight: 600;
   color: #333;
 }
-a.style-name {
+.style {
   font-size: 11px;
   font-weight: 600;
-  background: #005da9;
-  color: white;
-  margin: 2px;
-  padding: 2px;
-  border-radius: 3px;
-  display: inline-block;
 }
-body.show-visited a.style-name:visited {
-  background: #8714b0;
-  color: white;
+.style:not(:last-child)::after {
+  content: " · ";
+  display: inline-block;
+  margin: 0 2px;
 }
 
 .icon-links {
