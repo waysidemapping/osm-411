@@ -23,7 +23,7 @@ const params = {};
 // default values, can be changed in UI and saved to localStorage
 const prefs = {
   targetBlank: false,
-  showVisited: true,
+  showVisited: false,
 }
 
 fetch('data/services.json')
