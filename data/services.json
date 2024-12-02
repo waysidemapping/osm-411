@@ -1,5 +1,5 @@
 {
-    "osm_website": {
+    "osm_org": {
         "name": "OpenStreetMap.org",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/",
@@ -282,20 +282,9 @@
         "github": "OpenSnowMap-org",
         "url": "https://www.opensnowmap.org/",
         "hash": {
-            "map": "{{z}}/{{lon}}/{{lat}}",
             "b": "snowmap",
-            "h": "false"
-        },
-        "styles": {
-            "default": {
-                "name": "Default"
-            },
-            "planet": {
-                "name": "High DPI",
-                "query": {
-                    "h": "true"
-                }
-            }
+            "h": "false",
+            "map": "{{z}}/{{lon}}/{{lat}}"
         },
         "cat": "thematic"
     },
@@ -631,7 +620,7 @@
         "hash": {
             "map": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "qa"
+        "cat": "issue"
     },
     "osmose": {
         "name": "Osmose-QA",
@@ -641,7 +630,7 @@
         "hash": {
             "loc": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "qa"
+        "cat": "issue"
     },
     "osm_inspector": {
         "name": "Geofabrik OSM Inspector",
@@ -651,7 +640,7 @@
             "lat": "{{lat}}",
             "lon": "{{lon}}"
         },
-        "cat": "qa",
+        "cat": "issue",
         "styles": {
             "geometry": {
                 "name": "Geometry",
@@ -796,29 +785,6 @@
             }
         }
     },
-    "geoscribble": {
-        "name": "GeoScribble",
-        "github": "Zverik/geoscribble",
-        "url": " https://geoscribble.osmz.ru/map",
-        "hash": {
-            "": "{{z}}/{{lat}}/{{lon}}"
-        },
-        "cat": "qa"
-    },
-    "osm_then_and_now": {
-        "name": "OSM Then and Now",
-        "github": "mvexel/thenandnow",
-        "url": " https://2008.osm.lol",
-        "hash": {
-            "": "{{z}}/{{lat}}/{{lon}}"
-        },
-        "cat": "qa",
-        "styles": {
-            "default": {
-                "name": "2008–present"
-            }
-        }
-    },
     "osm_org_changesets": {
         "name": "OpenStreetMap.org Changesets",
         "github": "openstreetmap/openstreetmap-website",
@@ -848,22 +814,42 @@
         },
         "cat": "changeset"
     },
-    "maputnik": {
-        "name": "Maputnik",
-        "github": "maplibre/maputnik",
-        "url": "https://maplibre.org/maputnik/",
+    "osm_org_notes": {
+        "name": "OpenStreetMap.org Notes",
+        "github": "openstreetmap/openstreetmap-website",
+        "url": "https://www.openstreetmap.org/",
         "hash": {
-            "": "{{z}}/{{lat}}/{{lon}}"
+            "map": "{{z}}/{{lat}}/{{lon}}",
+            "layers": "N"
         },
-        "cat": "carto"
+        "cat": "note"
     },
-    "map_compare": {
-        "name": "Geofabrik Map Compare",
-        "url": " https://tools.geofabrik.de/mc/",
+    "osm_note_viewer": {
+        "name": "osm-note-viewer",
+        "github": "AntonKhorev/osm-note-viewer",
+        "url": "https://antonkhorev.github.io/osm-note-viewer/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "note"
+    },
+    "geoscribble": {
+        "name": "GeoScribble",
+        "github": "Zverik/geoscribble",
+        "url": "https://geoscribble.osmz.ru/map",
         "hash": {
             "": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "carto"
+        "cat": "note"
+    },
+    "osm_org_directions": {
+        "name": "OpenStreetMap.org Directions",
+        "github": "openstreetmap/openstreetmap-website",
+        "url": "https://www.openstreetmap.org/directions",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "router"
     },
     "osrm": {
         "name": "OSRM Frontend",
@@ -1091,6 +1077,37 @@
                 "hash": {
                     "profile": "hiking-mountain"
                 }
+            }
+        }
+    },
+    "maputnik": {
+        "name": "Maputnik",
+        "github": "maplibre/maputnik",
+        "url": "https://maplibre.org/maputnik/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "carto"
+    },
+    "map_compare": {
+        "name": "Geofabrik Map Compare",
+        "url": " https://tools.geofabrik.de/mc/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "compare"
+    },
+    "osm_then_and_now": {
+        "name": "OSM Then and Now",
+        "github": "mvexel/thenandnow",
+        "url": "https://2008.osm.lol",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "compare",
+        "styles": {
+            "default": {
+                "name": "2008–present"
             }
         }
     },
