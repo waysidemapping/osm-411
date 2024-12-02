@@ -1,0 +1,865 @@
+{
+    "osm_website": {
+        "name": "OpenStreetMap.org",
+        "github": "openstreetmap/openstreetmap-website",
+        "url": "https://www.openstreetmap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "styles": {
+            "o": {
+                "name": "OSM Carto",
+                "hash": {
+                    "layers": "O"
+                }
+            },
+            "t": {
+                "name": "Transport Map",
+                "hash": {
+                    "layers": "T"
+                }
+            },
+            "p": {
+                "name": "Tracestrack Topo",
+                "hash": {
+                    "layers": "P"
+                }
+            },
+            "n": {
+                "name": "Map Notes",
+                "hash": {
+                    "layers": "N"
+                }
+            },
+            "g": {
+                "name": "GPS Traces",
+                "hash": {
+                    "layers": "G"
+                }
+            }
+        }
+    },
+    
+    "id": {
+        "name": "iD",
+        "github": "openstreetmap/iD",
+        "url": "https://www.openstreetmap.org/edit?editor=id",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "editor"
+    },
+    "rapid": {
+        "name": "Rapid",
+        "github": "facebook/RapiD",
+        "url": "https://rapideditor.org/edit",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "editor"
+    },
+    "level0": {
+        "name": "Level0",
+        "github": "Zverik/Level0",
+        "url": " https://level0.osmz.ru/",
+        "query": {
+            "url": "map%3D{{z}}%2F{{lat}}%2F{{lon}}"
+        },
+        "cat": "editor"
+    },
+    "waymarkedtrails": {
+        "name": "Waymarked Trails",
+        "osm_wiki": "Waymarked_Trails",
+        "github": "waymarkedtrails/waymarkedtrails-website",
+        "cat": "trail",
+        "styles": {
+            "hiking": {
+                "name": "Hiking",
+                "url": "https://hiking.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "cycling": {
+                "name": "Cycling",
+                "url": "https://cycling.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "mtb": {
+                "name": "MTB",
+                "url": "https://mtb.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "riding": {
+                "name": "Horse Riding",
+                "url": "https://riding.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "skating": {
+                "name": "Inline Skating",
+                "url": "https://skating.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            },
+            "slopes": {
+                "name": "Winter Sport Slopes",
+                "url": "https://slopes.waymarkedtrails.org/#",
+                "query": {
+                    "map": "{{z}}/{{lat}}/{{lon}}"
+                }
+            }
+        }
+    },
+    "americana": {
+        "name": "OSM Americana",
+        "github": "osm-americana/openstreetmap-americana",
+        "url": "https://americanamap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle"
+    },
+    "opentrailmap": {
+        "name": "OpenTrailMap",
+        "github": "osmus/OpenTrailMap",
+        "url": "https://opentrailmap.us/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "trail",
+        "styles": {
+            "all": {
+                "name": "All"
+            },
+            "foot": {
+                "name": "Hiking",
+                "hash": {
+                    "mode": "foot"
+                }
+            },
+            "wheelchair": {
+                "name": "Wheelchair",
+                "hash": {
+                    "mode": "wheelchair"
+                }
+            },
+            "bicycle": {
+                "name": "Biking",
+                "hash": {
+                    "mode": "bicycle"
+                }
+            },
+            "mtb": {
+                "name": "Mountain Biking",
+                "hash": {
+                    "mode": "mtb"
+                }
+            },
+            "inline_skates": {
+                "name": "Inline Skating",
+                "hash": {
+                    "mode": "inline_skates"
+                }
+            },
+            "horse": {
+                "name": "Horse",
+                "hash": {
+                    "mode": "horse"
+                }
+            },
+            "atv": {
+                "name": "ATV",
+                "hash": {
+                    "mode": "atv"
+                }
+            },
+            "nordic": {
+                "name": "Cross-Country Ski",
+                "hash": {
+                    "mode": "ski:nordic"
+                }
+            },
+            "snowmobile": {
+                "name": "Snowmobile",
+                "hash": {
+                    "mode": "snowmobile"
+                }
+            },
+            "canoe": {
+                "name": "Canoe",
+                "hash": {
+                    "mode": "canoe"
+                }
+            }
+        }
+    },
+    "openrailwaymap": {
+        "name": "OpenRailwayMap",
+        "osm_wiki": "OpenRailwayMap",
+        "github": "OpenRailwayMap/OpenRailwayMap",
+        "url": "https://www.openrailwaymap.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "thematic",
+        "styles": {
+            "standard": {
+                "name": "Infrastructure",
+                "query": {
+                    "style": "standard"
+                }
+            },
+            "maxspeed": {
+                "name": "Max speeds",
+                "query": {
+                    "style": "maxspeed"
+                }
+            },
+            "signals": {
+                "name": "Signals",
+                "query": {
+                    "style": "signals"
+                }
+            },
+            "electrified": {
+                "name": "Electrification",
+                "query": {
+                    "style": "electrified"
+                }
+            },
+            "gauge": {
+                "name": "Track gauge",
+                "query": {
+                    "style": "gauge"
+                }
+            }
+        }
+    },
+    "openseamap": {
+        "name": "OpenSeaMap",
+        "github": "OpenSeaMap",
+        "url": "https://map.openseamap.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "thematic"
+    },
+    "opensnowmap": {
+        "name": "OpenSnowMap",
+        "github": "OpenSnowMap-org",
+        "url": "https://www.opensnowmap.org/",
+        "hash": {
+            "map": "{{z}}/{{lon}}/{{lat}}",
+            "b": "snowmap"
+        },
+        "cat": "thematic"
+    },
+    "openskimap": {
+        "name": "OpenSkiMap",
+        "github": "russellporter/openskimap.org",
+        "url": "https://openskimap.org/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "thematic"
+    },
+    "openpoimap": {
+        "name": "OpenPoiMap",
+        "github": "marczoutendijk/marczoutendijk.github.io",
+        "url": "https://openpoimap.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "thematic"
+    },
+    "opentopomap": {
+        "name": "OpenTopoMap",
+        "github": "der-stefan/OpenTopoMap",
+        "url": "https://opentopomap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle"
+    },
+    "openinframap": {
+        "name": "Open Infrastructure Map",
+        "github": "openinframap/openinframap",
+        "url": "https://openinframap.org/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "thematic"
+    },
+    "opencyclemap": {
+        "name": "OpenCycleMap",
+        "url": "https://www.opencyclemap.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "trail"
+    },
+    "cyclosm": {
+        "name": "CyclOSM",
+        "github": "cyclosm",
+        "url": "https://www.cyclosm.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}/cyclosm"
+        },
+        "cat": "trail"
+    },
+    "wikimedia_maps": {
+        "name": "Wikimedia Maps",
+        "url": "https://maps.wikimedia.org/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle"
+    },
+    "osm_buildings": {
+        "name": "OSM Buildings",
+        "github": "OSMBuildings/OSMBuildings",
+        "url": "https://osmbuildings.org/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "3d"
+    },
+    "osmgo": {
+        "name": "OSM go",
+        "gitlab": "DerKarlos/osmgo",
+        "url": "https://osmgo.org/go.html",
+        "query": {
+            "lat": "{{lat}}",
+            "lon": "{{lon}}",
+            "view": "-45",
+            "ele": "300"
+        },
+        "cat": "3d"
+    },
+    "little_big_city": {
+        "name": "Little Big City",
+        "github": "pissang/little-big-city",
+        "url": "https://pissang.github.io/little-big-city/",
+        "query": {
+            "lat": "{{lat}}",
+            "lng": "{{lon}}",
+            "style": "tile"
+        },
+        "styles": {
+            "tile": {
+                "name": "Flat"
+            },
+            "planet": {
+                "name": "Sphere",
+                "query": {
+                    "style": "planet"
+                }
+            }
+        },
+        "cat": "3d"
+    },
+    "openlevelup": {
+        "name": "OpenLevelUp",
+        "github": "lockcole/OpenLevelUp",
+        "url": "https://openlevelup.net/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "indoor"
+    },
+    "indoor_equal": {
+        "name": "indoor=",
+        "github": "indoorequal/indoorequal.org",
+        "url": "https://indoorequal.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "indoor"
+    },
+    "overpass_turbo": {
+        "name": "Overpass Turbo",
+        "github": "tyrasd/overpass-turbo",
+        "url": "https://overpass-turbo.eu",
+        "query": {
+            "C": "{{lat}};{{lon}};{{z}}"
+        },
+        "cat": "query"
+    },
+    "ultra": {
+        "name": "Ultra",
+        "gitlab": "trailstash/overpass-ultra",
+        "url": "https://overpass-ultra.us/",
+        "hash": {
+            "m": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "query"
+    },
+    "openaerialmap": {
+        "name": "OpenAerialMap",
+        "github": "hotosm/OpenAerialMap",
+        "url": "https://map.openaerialmap.org/",
+        "hash": {
+            "": "/{{lon}},{{lat}},{{z}}"
+        },
+        "cat": "aerial"
+    },
+    "esri_wayback": {
+        "name": "ESRI World Imagery Wayback",
+        "url": "https://livingatlas.arcgis.com/wayback/",
+        "hash": {
+            "mapCenter": "{{lon}}%2C{{lat}}%2C{{z}}"
+        },
+        "cat": "aerial"
+    },
+    "mapillary": {
+        "name": "Mapillary",
+        "github": "mapillary",
+        "url": "https://www.mapillary.com/app/",
+        "query": {
+            "z": "{{z}}",
+            "lat": "{{lat}}",
+            "lng": "{{lon}}"
+        },
+        "styles": {
+            "default": {
+                "name": "Default"
+            },
+            "detections": {
+                "name": "With detections",
+                "query": {
+                    "trafficSign": "all",
+                    "mapFeature": "all"
+                }
+            }
+        },
+        "cat": "streetlevel"
+    },
+    "kartaview": {
+        "name": "KartaView",
+        "github": "kartaview",
+        "url": "https://kartaview.org/map/",
+        "slug": "@{{lat}},{{lon}},{{z}}z",
+        "cat": "streetlevel"
+    },
+    "mapilio": {
+        "name": "Mapilio",
+        "github": "mapilio",
+        "url": "https://mapilio.com/app",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lng": "{{lon}}"
+        },
+        "cat": "streetlevel"
+    },
+    "panoramax": {
+        "name": "Panoramax",
+        "gitlab": "panoramax/server/website",
+        "url": "https://api.panoramax.xyz/",
+        "hash": {
+            "focus": "map",
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "streetlevel",
+        "styles": {
+            "default": {
+                "name": "Default",
+                "hash": {
+                    "theme": "default"
+                }
+            },
+            "age": {
+                "name": "Capture date",
+                "hash": {
+                    "theme": "age"
+                }
+            },
+            "type": {
+                "name": "Camera type",
+                "hash": {
+                    "theme": "type"
+                }
+            },
+            "score": {
+                "name": "Quality score",
+                "hash": {
+                    "theme": "score"
+                }
+            }
+        }
+    },
+    "nominatim_qa": {
+        "name": "Nominatim QA",
+        "github": "osm-search/Nominatim-Data-Analyser",
+        "url": "https://nominatim.org/qa/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa"
+    },
+    "osmose": {
+        "name": "Osmose-QA",
+        "osm_wiki": "Osmose",
+        "github": "osm-fr/osmose-frontend",
+        "url": " https://osmose.openstreetmap.fr/en/map/",
+        "hash": {
+            "loc": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa"
+    },
+    "osm_inspector": {
+        "name": "Geofabrik OSM Inspector",
+        "url": " https://tools.geofabrik.de/osmi/",
+        "query": {
+            "zoom": "{{z}}",
+            "lat": "{{lat}}",
+            "lon": "{{lon}}"
+        },
+        "cat": "qa",
+        "styles": {
+            "geometry": {
+                "name": "Geometry",
+                "query": {
+                    "view": "geometry"
+                }
+            },
+            "tagging": {
+                "name": "Tagging",
+                "query": {
+                    "view": "tagging"
+                }
+            },
+            "places": {
+                "name": "Places",
+                "query": {
+                    "view": "places"
+                }
+            },
+            "highways": {
+                "name": "Highways",
+                "query": {
+                    "view": "highways"
+                }
+            },
+            "areas": {
+                "name": "Areas",
+                "query": {
+                    "view": "areas"
+                }
+            },
+            "coastline": {
+                "name": "Coastline",
+                "query": {
+                    "view": "coastline"
+                }
+            },
+            "routing": {
+                "name": "Routing",
+                "query": {
+                    "view": "routing"
+                }
+            },
+            "addresses": {
+                "name": "Addresses",
+                "query": {
+                    "view": "addresses"
+                }
+            },
+            "water": {
+                "name": "Water",
+                "query": {
+                    "view": "water"
+                }
+            },
+            "pubtrans_stops": {
+                "name": "PT Stops",
+                "title": "Public Transport Stops",
+                "query": {
+                    "view": "pubtrans_stops"
+                }
+            },
+            "pubtrans_routes": {
+                "name": "PT Routes",
+                "title": "Public Transport Routes",
+                "query": {
+                    "view": "pubtrans_routes"
+                }
+            }
+        }
+    },
+    "waterwaymap": {
+        "name": "WaterwayMap",
+        "github": "amandasaurus/waterwaymap.org",
+        "url": "https://waterwaymap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa",
+        "styles": {
+            "default": {
+                "name": "All Waterways",
+                "hash": {
+                    "tiles": "planet-waterway-water"
+                }
+            },
+            "nonartificial": {
+                "name": "Natural",
+                "hash": {
+                    "tiles": "planet-waterway-nonartificial"
+                }
+            },
+            "boatable": {
+                "name": "Boatable",
+                "hash": {
+                    "tiles": "planet-waterway-boatable"
+                }
+            },
+            "canoeable": {
+                "name": "Canoeable",
+                "hash": {
+                    "tiles": "planet-waterway-canoeable"
+                }
+            },
+            "named": {
+                "name": "Named",
+                "hash": {
+                    "tiles": "planet-waterway-name-group-name"
+                }
+            },
+            "rivers": {
+                "name": "Rivers",
+                "hash": {
+                    "tiles": "planet-waterway-rivers-etc"
+                }
+            },
+            "downhills": {
+                "name": "Downhills",
+                "hash": {
+                    "tiles": "planet-grouped-ends"
+                }
+            },
+            "loops": {
+                "name": "Loops",
+                "url": "https://waterwaymap.org/loops/"
+            },
+            "ends": {
+                "name": "Ends",
+                "url": "https://waterwaymap.org/loops/"
+            }
+        }
+    },
+    "tigermap": {
+        "name": "TIGERMap",
+        "github": "watmildon/TIGERMap",
+        "url": "https://watmildon.github.io/TIGERMap/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa"
+    },
+    "osm_then_and_now": {
+        "name": "OSM Then and Now",
+        "github": "mvexel/thenandnow",
+        "url": " https://2008.osm.lol",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "qa",
+        "styles": {
+            "default": {
+                "name": "2008–present"
+            }
+        }
+    },
+    "maputnik": {
+        "name": "Maputnik",
+        "github": "maplibre/maputnik",
+        "url": "https://maplibre.org/maputnik/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "carto"
+    },
+    "map_compare": {
+        "name": "Geofabrik Map Compare",
+        "url": " https://tools.geofabrik.de/mc/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "carto"
+    },
+    "osrm": {
+        "name": "OSRM Frontend",
+        "github": "Project-OSRM/osrm-frontend",
+        "url": "https://map.project-osrm.org/",
+        "query": {
+            "z": "{{z}}",
+            "center": "{{lat}}%2C{{lon}}"
+        },
+        "cat": "router",
+        "styles": {
+            "car": {
+                "name": "Car",
+                "query": {
+                    "srv": "O"
+                }
+            },
+            "foot": {
+                "name": "Foot",
+                "query": {
+                    "srv": "1"
+                }
+            },
+            "bike": {
+                "name": "Bike",
+                "query": {
+                    "srv": "2"
+                }
+            }
+        }
+    },
+    "graphhopper": {
+        "name": "GraphHopper Maps",
+        "github": "graphhopper/graphhopper-maps",
+        "url": "https://graphhopper.com/maps/",
+        "query": {
+            "point": "{{lat}}%2C{{lon}}"
+        },
+        "cat": "router",
+        "styles": {
+            "car": {
+                "name": "Car",
+                "query": {
+                    "profile": "car"
+                }
+            },
+            "small_truck": {
+                "name": "Small Truck",
+                "query": {
+                    "profile": "small_truck"
+                }
+            },
+            "truck": {
+                "name": "Truck",
+                "query": {
+                    "profile": "truck"
+                }
+            },
+            "scooter": {
+                "name": "Scooter",
+                "query": {
+                    "profile": "scooter"
+                }
+            },
+            "foot": {
+                "name": "Foot",
+                "query": {
+                    "profile": "foot"
+                }
+            },
+            "hike": {
+                "name": "Hike",
+                "query": {
+                    "profile": "hike"
+                }
+            },
+            "bike": {
+                "name": "Bike",
+                "query": {
+                    "profile": "bike"
+                }
+            },
+            "mtb": {
+                "name": "MTB",
+                "query": {
+                    "profile": "mtb"
+                }
+            },
+            "racingbike": {
+                "name": "Racing Bike",
+                "query": {
+                    "profile": "racingbike"
+                }
+            }
+        }
+    },
+    "openrouteservice": {
+        "name": "Openrouteservice Map Client",
+        "github": "GIScience/ors-map-client",
+        "url": "https://maps.openrouteservice.org/",
+        "hash": {
+            "": "/place/@{{lon}},{{lat}},{{z}}"
+        },
+        "cat": "router"
+    },
+    "valhalla": {
+        "name": "Valhalla App",
+        "github": "nilsnolde/valhalla-app",
+        "url": "https://valhalla.openstreetmap.de/directions",
+        "query": {
+            "wps": "{{lon}}%2C{{lat}}"
+        },
+        "cat": "router"
+    },
+    "brouter": {
+        "name": "BRouter Web",
+        "github": "nrenner/brouter-web",
+        "url": "https://brouter.de/brouter-web/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}/standard"
+        },
+        "cat": "router"
+    },
+    "openhistoricalmap": {
+        "name": "OpenHistoricalMap",
+        "github": "OpenHistoricalMap",
+        "url": "https://www.openhistoricalmap.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "sister",
+        "styles": {
+            "o": {
+                "name": "Historical",
+                "hash": {
+                    "layers": "O"
+                }
+            },
+            "r": {
+                "name": "Railway",
+                "hash": {
+                    "layers": "R"
+                }
+            },
+            "w": {
+                "name": "Woodblock",
+                "hash": {
+                    "layers": "W"
+                }
+            },
+            "j": {
+                "name": "Japanese Scroll",
+                "hash": {
+                    "layers": "J"
+                }
+            }
+        }
+    }
+}

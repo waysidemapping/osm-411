@@ -1,0 +1,12 @@
+{
+    "name": "osm-411",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "serve": "node ./serve.js"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+}
