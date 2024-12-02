@@ -410,6 +410,42 @@
                 "hash": {
                     "style": "dataviz"
                 }
+            },
+            "openstreetmap": {
+                "name": "OSM OpenMapTiles",
+                "hash": {
+                    "style": "openstreetmap"
+                }
+            },
+            "bright": {
+                "name": "OSM Bright",
+                "hash": {
+                    "style": "bright"
+                }
+            },
+            "positron": {
+                "name": "Positron",
+                "hash": {
+                    "style": "positron"
+                }
+            },
+            "darkmatter": {
+                "name": "Dark Matter",
+                "hash": {
+                    "style": "darkmatter"
+                }
+            },
+            "topo": {
+                "name": "Terrain",
+                "hash": {
+                    "style": "topo"
+                }
+            },
+            "toner": {
+                "name": "Toner",
+                "hash": {
+                    "style": "toner"
+                }
             }
         }
     },
