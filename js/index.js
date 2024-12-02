@@ -192,7 +192,7 @@ function reloadPage() {
 
     let calLabel = catLabels[cat] || cat;
 
-    html += `<h2>${calLabel}</h2>`;
+    html += `<h2 class="section-name">${calLabel}</h2>`;
     html += `<ul class="services">`;
 
     for (let i in services) {
@@ -239,7 +239,7 @@ function reloadPage() {
   if (params.z && params.lat && params.lon) {
     descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
   } else {
-    descHtml += `<p>You can set a common viewport by setting the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.952399/-75.163613">Example</a></p>`;
+    descHtml += `<p>You can set a common viewport with the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.952399/-75.163613">Example</a></p>`;
   }
   document.getElementById('header-desc').innerHTML = descHtml;
 }
