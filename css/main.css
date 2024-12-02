@@ -1,5 +1,11 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+code {
+  font-family: monospace;
+  background: #eee;
 }
 
 a {
@@ -20,14 +26,22 @@ a:hover, a:focus {
   padding: 24px 12px;
 }
 
+#header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
 h1 {
   font-weight: bold;
-  text-align: center;
   font-size: x-large;
+  margin-bottom: 24px;
 }
 
 h2 {
   margin: 12px 0;
+}
+p {
+  margin-bottom: 12px;
 }
 
 .services {
@@ -47,17 +61,16 @@ h2 {
 .styles {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4px;
 }
 .service-name {
   font-weight: bold;
+  color: #555;
 }
 a.style-name {
   font-size: 11px;
   font-weight: bold;
   background: #005da9;
   color: white;
-  outline: 1px solid rgba(0,0,0,0.1);
   margin: 2px;
   padding: 2px;
   border-radius: 3px;

@@ -22,9 +22,21 @@ const params = {};
 
 // default values, can be changed in UI and saved to localStorage
 const prefs = {
-  targetBlank: true,
+  targetBlank: false,
   showVisited: true,
 }
+
+fetch('/data/services.json')
+  .then(response => response.json())
+  .then(json => {
+    addEventListeners();
+    loadPrefsFromStorage();
+    loadParamsFromUrl();
+
+    allServices = json;
+    prepareServiceData();
+    reloadPage();
+  });
 
 function addEventListeners() {
   document.getElementById('show-visited').addEventListener('change', function(e) {
@@ -32,6 +44,11 @@ function addEventListeners() {
   });
   document.getElementById('target-blank').addEventListener('change', function(e) {
     setPref('targetBlank', e.target.checked);
+  });
+
+  window.addEventListener("hashchange", function() {
+    loadParamsFromUrl();
+    reloadPage();
   });
 }
 
@@ -49,18 +66,6 @@ function loadPrefsFromStorage() {
 function writePrefsToStorage() {
   localStorage.setItem('prefs', JSON.stringify(prefs));
 }
-
-fetch('/data/services.json')
-  .then(response => response.json())
-  .then(json => {
-    addEventListeners();
-    loadPrefsFromStorage();
-    loadParamsFromUrl();
-
-    allServices = json;
-    prepareServiceData();
-    reloadPage();
-  });
 
 function loadParamsFromUrl() {
   let hashMap = hashValue('map');
@@ -127,7 +132,7 @@ function makeUrl(service) {
 
   function makeKeyValString(dict) {
     let str = "";
-    for (let key in dict) {
+    Object.keys(dict).reverse().forEach(function(key) {
       let val = dict[key];
       if (val.includes('{{')) {
         val = replaceTokens(val);
@@ -137,7 +142,7 @@ function makeUrl(service) {
       } else {
         str += key === '' ? val : key + '=' + val + '&';
       }
-    }
+    });
     if (str.length && str[str.length - 1] === '&') {
       str = str.slice(0, -1);
     }
@@ -163,9 +168,6 @@ function makeUrl(service) {
 
 function reloadPage() {
 
-  document.getElementById('show-visited').checked = prefs.showVisited;
-  document.getElementById('target-blank').checked = prefs.targetBlank;
-
   prefs.showVisited ? document.body.classList.add('show-visited') : document.body.classList.remove('show-visited');
 
   let html = "";
@@ -183,15 +185,17 @@ function reloadPage() {
       if (service.hidden) continue;
         
       html += `<li id="${service.id}" class="service">`;
+      html += `<span class="service-name">`;
       if (service.url) html += `<a href="${makeUrl(service)}" ${prefs.targetBlank ? 'target="_blank"' : ''}>`
-      html += `<span class="service-name">${service.name}</span>`;
+      html += service.name;
+      html += `</span>`;
       if (service.parentName) {
         html += ' on ' + service.parentName;
       }
       if (service.url) html += `</a>`;
       html += `<span class="icon-links">`;
-      if (service.github) html += `<a href="https://github.com/${service.github}" ${prefs.targetBlank ? 'target="_blank"' : ''}><img src="/img/github.svg"/></a>`;
-      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" ${prefs.targetBlank ? 'target="_blank"' : ''}><img src="/img/gitlab.svg"/></a>`;
+      if (service.github) html += `<a href="https://github.com/${service.github}" target="_blank"><img src="/img/github.svg"/></a>`;
+      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" target="_blank"><img src="/img/gitlab.svg"/></a>`;
       html += `</span>`;
       if (service.styles) {
         html += '<ul class="styles">';
@@ -211,6 +215,18 @@ function reloadPage() {
   }
 
   document.getElementById('content').innerHTML = html;
+
+  document.getElementById('show-visited').checked = prefs.showVisited;
+  document.getElementById('target-blank').checked = prefs.targetBlank;
+
+  let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
+
+  if (params.z && params.lat && params.lon) {
+    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="/">Clear</a></p>`;
+  } else {
+    descHtml += `<p>You can set a common viewport by setting the URL hash like <code>#map=zoom/lat/lon</code>. <a href="/#map=14/39.952399/-75.163613">Example</a></p>`;
+  }
+  document.getElementById('header-desc').innerHTML = descHtml;
 }
 
 function hashValue(key) {
