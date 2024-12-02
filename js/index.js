@@ -76,12 +76,27 @@ function loadParamsFromUrl() {
       let lat = parseFloat(results[2]);
       let lon = parseFloat(results[3]);
       if (isFinite(z) && isFinite(lat) && isFinite(lon)) {
+        return {
+          z: z,
+          lat: lat,
+          lon: lon
+        };
         params.z = z;
         params.lat = lat;
         params.lon = lon;
       }
     }
   }
+  return {
+    z: undefined,
+    lat: undefined,
+    lon: undefined
+  };
+}
+
+function loadParamsFromUrl() {
+  let newParms = mapParamsFromUrl();
+  Object.assign(params, newParms);
 }
 
 function prepareServiceData() {
