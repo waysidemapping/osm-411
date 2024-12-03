@@ -282,9 +282,8 @@
         "github": "OpenSnowMap-org",
         "url": "https://www.opensnowmap.org/",
         "hash": {
-            "b": "snowmap",
-            "h": "false",
-            "map": "{{z}}/{{lon}}/{{lat}}"
+            "map": "{{z}}/{{lon}}/{{lat}}",
+            "b": "snowmap"
         },
         "cat": "thematic"
     },

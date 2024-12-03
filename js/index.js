@@ -122,10 +122,11 @@ function prepareServiceData() {
       if (!child.slug) child.slug = service.slug;
       ['hash', 'query'].forEach(dictKey => {
         if (service[dictKey]) {
-          if (!child[dictKey]) child[dictKey] = {};
-          for (let key in service[dictKey]) {
-            if (!child[dictKey][key]) child[dictKey][key] = service[dictKey][key];
+          let serviceDict = structuredClone(service[dictKey]);
+          if (child[dictKey]) {
+            Object.assign(serviceDict, child[dictKey]); 
           }
+          child[dictKey] = serviceDict;
         }
       });
     }
@@ -150,7 +151,7 @@ function makeUrl(service) {
 
   function makeKeyValString(dict) {
     let str = "";
-    Object.keys(dict).reverse().forEach(function(key) {
+    Object.keys(dict).forEach(function(key) {
       let val = dict[key];
       if (val.includes('{{')) {
         val = replaceTokens(val);
