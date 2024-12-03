@@ -214,6 +214,7 @@ function reloadPage() {
       html += `<span class="icon-links">`;
       if (service.github) html += `<a href="https://github.com/${service.github}" target="_blank"><img src="img/github.svg"/></a>`;
       if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" target="_blank"><img src="img/gitlab.svg"/></a>`;
+      if (service.osmwiki) html += `<a href="https://wiki.openstreetmap.org/wiki/${service.osmwiki}" target="_blank"><img src="img/osmwiki.svg"/></a>`;
       html += `</span>`;
       if (service.styles) {
         html += '<ul class="styles">';

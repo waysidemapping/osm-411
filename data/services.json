@@ -1,6 +1,7 @@
 {
     "osm_org": {
         "name": "OpenStreetMap.org",
+        "osmwiki": "Web_front_end",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/",
         "hash": {
@@ -51,9 +52,9 @@
             }
         }
     },
-    
     "id": {
         "name": "iD",
+        "osmwiki": "iD",
         "github": "openstreetmap/iD",
         "url": "https://www.openstreetmap.org/edit?editor=id",
         "hash": {
@@ -63,6 +64,7 @@
     },
     "rapid": {
         "name": "Rapid",
+        "osmwiki": "Rapid",
         "github": "facebook/RapiD",
         "url": "https://rapideditor.org/edit",
         "hash": {
@@ -72,6 +74,7 @@
     },
     "level0": {
         "name": "Level0",
+        "osmwiki": "Level0",
         "github": "Zverik/Level0",
         "url": " https://level0.osmz.ru/",
         "query": {
@@ -155,7 +158,7 @@
     },
     "waymarkedtrails": {
         "name": "Waymarked Trails",
-        "osm_wiki": "Waymarked_Trails",
+        "osmwiki": "Waymarked_Trails",
         "github": "waymarkedtrails/waymarkedtrails-website",
         "cat": "thematic",
         "styles": {
@@ -205,6 +208,7 @@
     },
     "opencyclemap": {
         "name": "OpenCycleMap",
+        "osmwiki": "OpenCycleMap",
         "url": "https://www.opencyclemap.org/",
         "query": {
             "zoom": "{{z}}",
@@ -215,6 +219,7 @@
     },
     "cyclosm": {
         "name": "CyclOSM",
+        "osmwiki": "CyclOSM",
         "github": "cyclosm",
         "url": "https://www.cyclosm.org/",
         "hash": {
@@ -224,7 +229,7 @@
     },
     "openrailwaymap": {
         "name": "OpenRailwayMap",
-        "osm_wiki": "OpenRailwayMap",
+        "osmwiki": "OpenRailwayMap",
         "github": "OpenRailwayMap/OpenRailwayMap",
         "url": "https://www.openrailwaymap.org/",
         "query": {
@@ -268,6 +273,7 @@
     },
     "openseamap": {
         "name": "OpenSeaMap",
+        "osmwiki": "OpenSeaMap",
         "github": "OpenSeaMap",
         "url": "https://map.openseamap.org/",
         "query": {
@@ -279,6 +285,7 @@
     },
     "opensnowmap": {
         "name": "OpenSnowMap",
+        "osmwiki": "OpenSnowMap",
         "github": "OpenSnowMap-org",
         "url": "https://www.opensnowmap.org/",
         "hash": {
@@ -289,6 +296,7 @@
     },
     "openskimap": {
         "name": "OpenSkiMap",
+        "osmwiki": "OpenSkiMap",
         "github": "russellporter/openskimap.org",
         "url": "https://openskimap.org/",
         "hash": {
@@ -298,6 +306,7 @@
     },
     "openpoimap": {
         "name": "OpenPoiMap",
+        "osmwiki": "OpenPoiMap",
         "github": "marczoutendijk/marczoutendijk.github.io",
         "url": "https://openpoimap.org/",
         "query": {
@@ -309,6 +318,7 @@
     },
     "openinframap": {
         "name": "Open Infrastructure Map",
+        "osmwiki": "Open_Infrastructure_Map",
         "github": "openinframap/openinframap",
         "url": "https://openinframap.org/",
         "hash": {
@@ -318,6 +328,7 @@
     },
     "americana": {
         "name": "OSM Americana",
+        "osmwiki": "OpenStreetMap Americana",
         "github": "osm-americana/openstreetmap-americana",
         "url": "https://americanamap.org/",
         "hash": {
@@ -327,6 +338,7 @@
     },
     "opentopomap": {
         "name": "OpenTopoMap",
+        "osmwiki": "OpenTopoMap",
         "github": "der-stefan/OpenTopoMap",
         "url": "https://opentopomap.org/",
         "hash": {
@@ -344,6 +356,7 @@
     },
     "maptiler": {
         "name": "MapTiler",
+        "osmwiki": "MapTiler",
         "github": "maptiler",
         "url": "https://www.maptiler.com/maps/",
         "hash": {
@@ -439,6 +452,7 @@
     },
     "stadia_maps": {
         "name": "Stadia Maps",
+        "osmwiki": "Stadia_Maps",
         "github": "stadiamaps",
         "url": "https://stadiamaps.com/explore-the-map/",
         "hash": {
@@ -510,6 +524,7 @@
     },
     "osm_buildings": {
         "name": "OSM Buildings",
+        "osmwiki": "OSM_Buildings",
         "github": "OSMBuildings/OSMBuildings",
         "url": "https://osmbuildings.org/",
         "query": {
@@ -521,6 +536,7 @@
     },
     "osmgo": {
         "name": "OSM go",
+        "osmwiki": "OSM go",
         "gitlab": "DerKarlos/osmgo",
         "url": "https://osmgo.org/go.html",
         "query": {
@@ -554,7 +570,8 @@
         "cat": "3d"
     },
     "openlevelup": {
-        "name": "OpenLevelUp",
+        "name": "OpenLevelUp!",
+        "osmwiki": "OpenLevelUp",
         "github": "lockcole/OpenLevelUp",
         "url": "https://openlevelup.net/",
         "hash": {
@@ -564,6 +581,7 @@
     },
     "indoor_equal": {
         "name": "indoor=",
+        "osmwiki": "Indoor%3D",
         "github": "indoorequal/indoorequal.org",
         "url": "https://indoorequal.org/",
         "hash": {
@@ -573,6 +591,7 @@
     },
     "overpass_turbo": {
         "name": "Overpass Turbo",
+        "osmwiki": "Overpass_turbo",
         "github": "tyrasd/overpass-turbo",
         "url": "https://overpass-turbo.eu",
         "query": {
@@ -582,6 +601,7 @@
     },
     "ultra": {
         "name": "Ultra",
+        "osmwiki": "Overpass Ultra",
         "gitlab": "trailstash/overpass-ultra",
         "url": "https://overpass-ultra.us/",
         "hash": {
@@ -591,6 +611,7 @@
     },
     "openaerialmap": {
         "name": "OpenAerialMap",
+        "osmwiki": "OpenAerialMap",
         "github": "hotosm/OpenAerialMap",
         "url": "https://map.openaerialmap.org/",
         "hash": {
@@ -608,6 +629,7 @@
     },
     "mapillary": {
         "name": "Mapillary",
+        "osmwiki": "Mapillary",
         "github": "mapillary",
         "url": "https://www.mapillary.com/app/",
         "query": {
@@ -649,6 +671,7 @@
     },
     "kartaview": {
         "name": "KartaView",
+        "osmwiki": "KartaView",
         "github": "kartaview",
         "url": "https://kartaview.org/map/",
         "slug": "@{{lat}},{{lon}},{{z}}z",
@@ -656,6 +679,7 @@
     },
     "mapilio": {
         "name": "Mapilio",
+        "osmwiki": "Mapilio",
         "github": "mapilio",
         "url": "https://mapilio.com/app",
         "query": {
@@ -667,6 +691,7 @@
     },
     "panoramax": {
         "name": "Panoramax",
+        "osmwiki": "Panoramax",
         "gitlab": "panoramax/server/website",
         "url": "https://api.panoramax.xyz/",
         "hash": {
@@ -703,6 +728,7 @@
     },
     "nominatim_qa": {
         "name": "Nominatim QA",
+        "osmwiki": "Nominatim QA tool",
         "github": "osm-search/Nominatim-Data-Analyser",
         "url": "https://nominatim.org/qa/",
         "hash": {
@@ -712,7 +738,7 @@
     },
     "osmose": {
         "name": "Osmose-QA",
-        "osm_wiki": "Osmose",
+        "osmwiki": "Osmose",
         "github": "osm-fr/osmose-frontend",
         "url": " https://osmose.openstreetmap.fr/en/map/",
         "hash": {
@@ -722,6 +748,7 @@
     },
     "osm_inspector": {
         "name": "Geofabrik OSM Inspector",
+        "osmwiki": "OSM Inspector",
         "url": " https://tools.geofabrik.de/osmi/",
         "query": {
             "zoom": "{{z}}",
@@ -800,6 +827,7 @@
     },
     "waterwaymap": {
         "name": "WaterwayMap",
+        "osmwiki": "WaterwayMap.org",
         "github": "amandasaurus/waterwaymap.org",
         "url": "https://waterwaymap.org/",
         "hash": {
@@ -861,6 +889,7 @@
     },
     "tigermap": {
         "name": "TIGERMap",
+        "osmwiki": "TIGER_fixup#TIGERMap",
         "github": "watmildon/TIGERMap",
         "url": "https://watmildon.github.io/TIGERMap/",
         "hash": {
@@ -875,6 +904,7 @@
     },
     "osm_org_changesets": {
         "name": "OpenStreetMap.org Changesets",
+        "osmwiki": "Web_front_end#Data_browser",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/history",
         "hash": {
@@ -883,7 +913,8 @@
         "cat": "changeset"
     },
     "latest_changes": {
-        "name": "Latest Changes",
+        "name": "OSM Latest Changes",
+        "osmwiki": "OSM Latest Changes",
         "github": "rene78/latest-changes",
         "url": "https://rene78.github.io/latest-changes/",
         "hash": {
@@ -893,6 +924,7 @@
     },
     "achavi": {
         "name": "Achavi",
+        "osmwiki": "Achavi",
         "github": "nrenner/achavi",
         "url": "https://overpass-api.de/achavi/",
         "query": {
@@ -904,6 +936,7 @@
     },
     "osm_org_notes": {
         "name": "OpenStreetMap.org Notes",
+        "osmwiki": "Notes",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/",
         "hash": {
@@ -914,6 +947,7 @@
     },
     "osm_note_viewer": {
         "name": "osm-note-viewer",
+        "osmwiki": "OSM Note viewer",
         "github": "AntonKhorev/osm-note-viewer",
         "url": "https://antonkhorev.github.io/osm-note-viewer/",
         "hash": {
@@ -923,6 +957,7 @@
     },
     "geoscribble": {
         "name": "GeoScribble",
+        "osmwiki": "GeoScribble",
         "github": "Zverik/geoscribble",
         "url": "https://geoscribble.osmz.ru/map",
         "hash": {
@@ -932,6 +967,7 @@
     },
     "osm_org_directions": {
         "name": "OpenStreetMap.org Directions",
+        "osmwiki": "Web_front_end/Routing",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/directions",
         "hash": {
@@ -941,6 +977,7 @@
     },
     "osrm": {
         "name": "OSRM Frontend",
+        "osmwiki": "Open Source Routing Machine",
         "github": "Project-OSRM/osrm-frontend",
         "url": "https://map.project-osrm.org/",
         "query": {
@@ -971,6 +1008,7 @@
     },
     "graphhopper": {
         "name": "GraphHopper Maps",
+        "osmwiki": "GraphHopper",
         "github": "graphhopper/graphhopper-maps",
         "url": "https://graphhopper.com/maps/",
         "query": {
@@ -1036,6 +1074,7 @@
     },
     "openrouteservice": {
         "name": "Openrouteservice Map Client",
+        "osmwiki": "Openrouteservice",
         "github": "GIScience/ors-map-client",
         "url": "https://maps.openrouteservice.org/",
         "hash": {
@@ -1045,6 +1084,7 @@
     },
     "valhalla": {
         "name": "Valhalla App",
+        "osmwiki": "Valhalla",
         "github": "nilsnolde/valhalla-app",
         "url": "https://valhalla.openstreetmap.de/directions",
         "query": {
@@ -1098,6 +1138,7 @@
     },
     "brouter": {
         "name": "BRouter Web",
+        "osmwiki": "BRouter",
         "github": "nrenner/brouter-web",
         "url": "https://brouter.de/brouter-web/",
         "hash": {
@@ -1214,6 +1255,7 @@
     },
     "maputnik": {
         "name": "Maputnik",
+        "osmwiki": "Maputnik",
         "github": "maplibre/maputnik",
         "url": "https://maplibre.org/maputnik/",
         "hash": {
@@ -1245,6 +1287,7 @@
     },
     "openhistoricalmap": {
         "name": "OpenHistoricalMap",
+        "osmwiki": "OpenHistoricalMap",
         "github": "OpenHistoricalMap",
         "url": "https://www.openhistoricalmap.org/",
         "hash": {
