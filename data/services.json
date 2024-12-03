@@ -438,6 +438,77 @@
             }
         }
     },
+    "stadia_maps": {
+        "name": "Stadia Maps",
+        "github": "stadiamaps",
+        "url": "https://stadiamaps.com/explore-the-map/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "mapstyle",
+        "styles": {
+            "alidade_smooth": {
+                "name": "Alidade Smooth",
+                "hash": {
+                    "style": "alidade_smooth"
+                }
+            },
+            "alidade_smooth_dark": {
+                "name": "Alidade Smooth Dark",
+                "hash": {
+                    "style": "alidade_smooth_dark"
+                }
+            },
+            "alidade_bright": {
+                "name": "Alidade Bright",
+                "hash": {
+                    "style": "alidade_bright"
+                }
+            },
+            "alidade_satellite": {
+                "name": "Alidade Satellite",
+                "hash": {
+                    "style": "alidade_satellite"
+                }
+            },
+            "osm_bright": {
+                "name": "OSM Bright",
+                "hash": {
+                    "style": "osm_bright"
+                }
+            },
+            "outdoors": {
+                "name": "Outdoors",
+                "hash": {
+                    "style": "outdoors"
+                }
+            },
+            "stamen_toner": {
+                "name": "Stamen Toner",
+                "hash": {
+                    "style": "stamen_toner"
+                }
+            },
+            "stamen_toner_lite": {
+                "name": "Stamen Toner Lite",
+                "hash": {
+                    "style": "stamen_toner_lite"
+                }
+            },
+            "stamen_terrain": {
+                "name": "Stamen Terrain",
+                "hash": {
+                    "style": "stamen_terrain"
+                }
+            },
+            "stamen_watercolor": {
+                "name": "Stamen Watercolor",
+                "hash": {
+                    "style": "stamen_watercolor"
+                }
+            }
+        }
+    },
     "osm_buildings": {
         "name": "OSM Buildings",
         "github": "OSMBuildings/OSMBuildings",
@@ -547,10 +618,28 @@
         },
         "styles": {
             "default": {
-                "name": "Default"
+                "name": "All Images"
+            },
+            "panos": {
+                "name": "360° Panoramas",
+                "query": {
+                    "panos": "true"
+                }
+            },
+            "trafficsign": {
+                "name": "Traffic Signs",
+                "query": {
+                    "trafficSign": "all"
+                }
+            },
+            "mapfeature": {
+                "name": "Map Features",
+                "query": {
+                    "mapFeature": "all"
+                }
             },
             "detections": {
-                "name": "With detections",
+                "name": "All Detections",
                 "query": {
                     "trafficSign": "all",
                     "mapFeature": "all"
