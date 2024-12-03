@@ -1051,7 +1051,51 @@
         "query": {
             "wps": "{{lon}}%2C{{lat}}"
         },
-        "cat": "router"
+        "cat": "router",
+        "styles": {
+            "bicycle": {
+                "name": "Bicycle",
+                "query": {
+                    "profile": "bicycle"
+                }
+            },
+            "pedestrian": {
+                "name": "Pedestrian",
+                "query": {
+                    "profile": "pedestrian"
+                }
+            },
+            "car": {
+                "name": "Car",
+                "query": {
+                    "profile": "car"
+                }
+            },
+            "truck": {
+                "name": "Truck",
+                "query": {
+                    "profile": "truck"
+                }
+            },
+            "bus": {
+                "name": "Bus",
+                "query": {
+                    "profile": "bus"
+                }
+            },
+            "motor_scooter": {
+                "name": "Motor Scooter",
+                "query": {
+                    "profile": "motor_scooter"
+                }
+            },
+            "motorcycle": {
+                "name": "Motorcycle",
+                "query": {
+                    "profile": "motorcycle"
+                }
+            }
+        }
     },
     "brouter": {
         "name": "BRouter Web",
