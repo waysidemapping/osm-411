@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Artboard</title>
-    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Path" fill="#000000" points="0 4 3 4 8 24 13.5 4 17.5 4 23 24 28 4 31 4 25 28 21 28 15.5 8 10 28 6 28"></polygon>
-    </g>
+    <polygon fill="#000000" points="0 4 3 4 8 24 13.5 4 17.5 4 23 24 28 4 31 4 25 28 21 28 15.5 8 10 28 6 28"></polygon>
 </svg>
