@@ -206,6 +206,15 @@
             }
         }
     },
+    "opentrailstash": {
+        "name": "OpenTrailStash",
+        "gitlab": "trailstash/openstyle",
+        "url": "https://open.trailsta.sh/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "thematic"
+    },
     "opencyclemap": {
         "name": "OpenCycleMap",
         "osmwiki": "OpenCycleMap",
