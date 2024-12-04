@@ -749,7 +749,7 @@
         "name": "Osmose-QA",
         "osmwiki": "Osmose",
         "github": "osm-fr/osmose-frontend",
-        "url": " https://osmose.openstreetmap.fr/en/map/",
+        "url": " https://osmose.openstreetmap.fr/",
         "hash": {
             "loc": "{{z}}/{{lat}}/{{lon}}"
         },
