@@ -1291,9 +1291,18 @@
         },
         "cat": "carto"
     },
+    "maperture": {
+        "name": "Stamen Maperture",
+        "github": "stamen/maperture",
+        "url": "https://stamen.github.io/maperture/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "compare"
+    },
     "map_compare": {
         "name": "Geofabrik Map Compare",
-        "url": " https://tools.geofabrik.de/mc/",
+        "url": "https://tools.geofabrik.de/mc/",
         "hash": {
             "": "{{z}}/{{lat}}/{{lon}}"
         },
