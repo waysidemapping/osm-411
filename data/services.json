@@ -72,6 +72,16 @@
         },
         "cat": "editor"
     },
+    "josm": {
+        "name": "JOSM",
+        "osmwiki": "JOSM",
+        "github": "JOSM",
+        "url": "https://www.openstreetmap.org/edit?editor=remote",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "editor"
+    },
     "level0": {
         "name": "Level0",
         "osmwiki": "Level0",
