@@ -1294,6 +1294,40 @@
             }
         }
     },
+    "mapycz": {
+        "name": "Mapy.cz",
+        "osmwiki": "Mapy.cz",
+        "github": "mapycz",
+        "url": "https://mapy.cz",
+        "query": {
+            "x": "{{lon}}",
+            "y": "{{lat}}",
+            "z": "{{z}}"
+        },
+        "cat": "platforms",
+        "styles": {
+            "zakladni": {
+                "name": "Base",
+                "url": "https://mapy.cz/zakladni"
+            },
+            "turisticka": {
+                "name": "Outdoor",
+                "url": "https://mapy.cz/turisticka"
+            },
+            "letecka": {
+                "name": "Aerial",
+                "url": "https://mapy.cz/letecka"
+            },
+            "dopravni": {
+                "name": "Traffic",
+                "url": "https://mapy.cz/dopravni"
+            },
+            "zimni": {
+                "name": "Winter",
+                "url": "https://mapy.cz/zimni"
+            }
+        }
+    },
     "openhistoricalmap": {
         "name": "OpenHistoricalMap",
         "osmwiki": "OpenHistoricalMap",
