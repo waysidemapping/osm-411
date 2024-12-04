@@ -227,6 +227,15 @@
         },
         "cat": "thematic"
     },
+    "veloplanner": {
+        "name": "VeloPlanner",
+        "github": "veloplanner",
+        "url": "https://veloplanner.com/routes",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "thematic"
+    },
     "openrailwaymap": {
         "name": "OpenRailwayMap",
         "osmwiki": "OpenRailwayMap",
