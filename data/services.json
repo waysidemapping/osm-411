@@ -1322,6 +1322,16 @@
             }
         }
     },
+    "facilmap": {
+        "name": "FacilMap",
+        "osmwiki": "FacilMap",
+        "github": "FacilMap/facilmap",
+        "url": "https://facilmap.org/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}/Lima"
+        },
+        "cat": "platforms"
+    },
     "mapycz": {
         "name": "Mapy.cz",
         "osmwiki": "Mapy.cz",
