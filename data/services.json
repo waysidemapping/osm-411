@@ -1322,6 +1322,15 @@
         },
         "cat": "carto"
     },
+    "mapmatrix": {
+        "name": "MapMatrix",
+        "github": "veloplanner/map-matrix",
+        "url": "https://mapmatrix.veloplanner.com/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}/0/0"
+        },
+        "cat": "compare"
+    },
     "maperture": {
         "name": "Stamen Maperture",
         "github": "stamen/maperture",
