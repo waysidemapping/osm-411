@@ -1406,6 +1406,25 @@
             }
         }
     },
+    "lokjo": {
+        "name": "Lokjo",
+        "url": "https://www.lokjo.com/",
+        "hash": {
+            "m": "{{z}}:{{lat}}:{{lon}}:0"
+        },
+        "cat": "platforms",
+        "styles": {
+            "default": {
+                "name": "Map"
+            },
+            "sat": {
+                "name": "Satellite",
+                "hash": {
+                    "t": "sat"
+                }
+            }
+        }
+    },
     "openhistoricalmap": {
         "name": "OpenHistoricalMap",
         "osmwiki": "OpenHistoricalMap",
