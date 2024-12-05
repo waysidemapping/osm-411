@@ -354,6 +354,37 @@
         },
         "cat": "thematic"
     },
+    "osm_wikidata_map": {
+        "name": "OSM-Wikidata Map",
+        "osmwiki": "OSM-Wikidata Map Framework",
+        "gitlab": "openetymologymap",
+        "url": "https://osmwd.dsantini.it/",
+        "hash": {
+            "": "{{lon}},{{lat}},{{z}}"
+        },
+        "cat": "thematic",
+        "styles": {
+            "osmwd": {
+                "name": "Wikidata"
+            },
+            "etymology": {
+                "name": "Etymology",
+                "url": "https://etymology.dsantini.it/"
+            },
+            "architect": {
+                "name": "Architect",
+                "url": "https://architect.dsantini.it/"
+            },
+            "artist": {
+                "name": "Artist",
+                "url": "https://artist.dsantini.it/"
+            },
+            "burial": {
+                "name": "Burial",
+                "url": "https://burial.dsantini.it/"
+            }
+        }
+    },
     "americana": {
         "name": "OSM Americana",
         "osmwiki": "OpenStreetMap Americana",
