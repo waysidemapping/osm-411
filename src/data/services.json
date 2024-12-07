@@ -53,6 +53,16 @@
             }
         }
     },
+    "openstreetbrowser": {
+        "name": "OpenStreetBrowser",
+        "osmwiki": "OpenStreetBrowser",
+        "github": "plepe/OpenStreetBrowser",
+        "url": " https://www.openstreetbrowser.org/",
+        "hash": {
+            "map": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "general"
+    },
     "id": {
         "name": "iD",
         "osmwiki": "iD",
