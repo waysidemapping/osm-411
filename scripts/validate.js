@@ -10,6 +10,7 @@ const valid = validate(services);
 
 if (!valid) {
   console.log(validate.errors);
+  process.exit(1);
 } else {
   console.log('services.json looks okay');
 }
