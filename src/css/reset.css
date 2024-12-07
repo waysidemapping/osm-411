@@ -52,6 +52,6 @@ b, strong {
 i {
   font-style: italic;
 }
-input, label {
+input[type="checkbox"], label {
   cursor: pointer;
 }

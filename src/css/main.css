@@ -39,15 +39,59 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-#container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 24px 12px;
+#filter-wrap {
+  position: relative;
+}
+#filter-wrap:has(#filter:placeholder-shown) #clear-filter {
+  display: none;
+}
+#filter-wrap:has(#filter:focus) img {
+  opacity: 0.9;
+}
+#filter-wrap img {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.65;
+  pointer-events: none;
+}
+#filter {
+  width: 100%;
+  border-radius: 20px;
+  font-size: 15px;
+  padding: 0 16px 0 32px;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+#filter:focus {
+  border-color: #aaa;
+}
+#clear-filter {
+  right: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.65;
+}
+#clear-filter:hover, #clear-filter:focus {
+  opacity: 1;
+}
+#header-desc {
+  margin-bottom: 24px;
 }
 
-#header {
-  margin-bottom: 24px;
-
+#container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 12px;
 }
 
 h1 {

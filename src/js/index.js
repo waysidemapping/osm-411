@@ -42,12 +42,26 @@ fetch('data/services.json')
     reloadPage();
   });
 
+function getFilterValue() {
+  return document.getElementById('filter')?.value || '';
+}
+
 function addEventListeners() {
   document.getElementById('show-visited').addEventListener('change', function(e) {
     setPref('showVisited', e.target.checked);
   });
   document.getElementById('target-blank').addEventListener('change', function(e) {
     setPref('targetBlank', e.target.checked);
+  });
+  document.getElementById('filter').addEventListener('focus', function(e) {
+    e.target.select();
+  });
+  document.getElementById('filter').addEventListener('input', function(e) {
+    reloadPage();
+  });
+  document.getElementById('clear-filter').addEventListener('click', function(e) {
+    document.getElementById('filter').value = '';
+    reloadPage();
   });
 
   window.addEventListener("hashchange", function() {
@@ -104,6 +118,7 @@ function prepareServiceData() {
   for (let serviceId in allServices) {
     let service = allServices[serviceId];
     service.id = serviceId;
+    service.catName = catLabels[service.cat] || service.cat;
 
     if (!servicesByCat[service.cat]) servicesByCat[service.cat] = [];
     servicesByCat[service.cat].push(service);
@@ -187,10 +202,28 @@ function reloadPage() {
 
   prefs.showVisited ? document.body.classList.add('show-visited') : document.body.classList.remove('show-visited');
 
+  let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
+
+  if (params.z && params.lat && params.lon) {
+    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
+  } else {
+    descHtml += `<p>You can set a common viewport with the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.952399/-75.163613">Example</a></p>`;
+  }
+  document.getElementById('header-desc').innerHTML = descHtml;
+
   let html = "";
+
+  let filter = getFilterValue().trim().toLowerCase();
 
   for (let cat in servicesByCat) {
     let services = servicesByCat[cat];
+    
+    if (filter) {
+      services = services.filter(function(service) {
+        return service.name.toLowerCase().includes(filter) || service.catName.toLowerCase().includes(filter);
+      });
+    }
+    if (!services.length) continue;
 
     let calLabel = catLabels[cat] || cat;
 
@@ -235,15 +268,6 @@ function reloadPage() {
 
   document.getElementById('show-visited').checked = prefs.showVisited;
   document.getElementById('target-blank').checked = prefs.targetBlank;
-
-  let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
-
-  if (params.z && params.lat && params.lon) {
-    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
-  } else {
-    descHtml += `<p>You can set a common viewport with the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.952399/-75.163613">Example</a></p>`;
-  }
-  document.getElementById('header-desc').innerHTML = descHtml;
 }
 
 function hashValue(key) {
