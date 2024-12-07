@@ -1,12 +1,14 @@
 {
-    "name": "osm-411",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "serve": "node ./serve.js"
-    },
-    "devDependencies": {
-    },
-    "dependencies": {
-    }
+  "name": "osm-411",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "serve": "node ./scripts/serve.js",
+    "validate": "node ./scripts/validate.js"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  },
+  "dependencies": {
+  }
 }

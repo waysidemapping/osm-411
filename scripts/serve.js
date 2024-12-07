@@ -3,7 +3,7 @@ import url from 'url';
 import fs from 'fs';
 import path from 'path';
 
-const baseDirectory = path.dirname(url.fileURLToPath(import.meta.url));
+const baseDirectory = path.dirname(url.fileURLToPath(import.meta.url)) + '/../src';
 const port = 411;
 
 http.createServer(function (request, response) {

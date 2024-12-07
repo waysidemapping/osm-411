@@ -1,6 +1,7 @@
 {
     "osm_org": {
         "name": "OpenStreetMap.org",
+        "cat": "general",
         "osmwiki": "Web_front_end",
         "github": "openstreetmap/openstreetmap-website",
         "url": "https://www.openstreetmap.org/",

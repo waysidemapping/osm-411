@@ -1,0 +1,66 @@
+{
+  "title": "services",
+  "type": "object",
+  "additionalProperties": {
+    "title": "service",
+    "type": "object",
+    "required": ["name", "cat"],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "cat": {
+        "type": "string"
+      },
+      "osmwiki": {
+        "type": "string"
+      },
+      "github": {
+        "type": "string"
+      },
+      "gitlab": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "hash": {
+        "type": "object"
+      },
+      "query": {
+        "type": "object"
+      },
+      "styles": {
+        "title": "styles",
+        "type": "object",
+        "additionalProperties": {
+          "title": "style",
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "slug": {
+              "type": "string"
+            },
+            "hash": {
+              "type": "object"
+            },
+            "query": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "additionalProperties": false
+  }
+}

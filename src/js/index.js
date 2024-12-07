@@ -105,8 +105,6 @@ function prepareServiceData() {
     let service = allServices[serviceId];
     service.id = serviceId;
 
-    if (!service.cat) service.cat = 'general';
-
     if (!servicesByCat[service.cat]) servicesByCat[service.cat] = [];
     servicesByCat[service.cat].push(service);
 
@@ -133,8 +131,8 @@ function prepareServiceData() {
   }
 }
 
-function makeUrl(service) {
-  let url = service.url;
+function makeUrl(definition) {
+  let url = definition.url;
 
   function replaceTokens(val) {
     for (let paramKey in params) {
@@ -168,18 +166,18 @@ function makeUrl(service) {
     return str;
   }
 
-  if (service.slug) {
-    let slug = replaceTokens(service.slug);
+  if (definition.slug) {
+    let slug = replaceTokens(definition.slug);
     if (!slug.includes('{{')) {
       url += slug;
     }
   } 
-  if (service.hash) {
-    let str = makeKeyValString(service.hash);
+  if (definition.hash) {
+    let str = makeKeyValString(definition.hash);
     if (str.length) url += '#' + str;
   }
-  if (service.query) {
-    let str = makeKeyValString(service.query);
+  if (definition.query) {
+    let str = makeKeyValString(definition.query);
     if (str.length) url += '?' + str;
   }
   return url;
