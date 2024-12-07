@@ -167,13 +167,20 @@ function makeUrl(definition) {
     let str = "";
     Object.keys(dict).forEach(function(key) {
       let val = dict[key];
-      if (val.includes('{{')) {
+      if (val?.includes('{{')) {
         val = replaceTokens(val);
         if (!val.includes('{{')) {
           str += key === '' ? val : key + '=' + val + '&';
         }
       } else {
-        str += key === '' ? val : key + '=' + val + '&';
+        if (val === null) {
+          str += key;
+        } else if (key === '') {
+          str += val;
+        } else {
+          str += key + '=' + val;
+        }
+        str += '&';
       }
     });
     if (str.length && str[str.length - 1] === '&') {
