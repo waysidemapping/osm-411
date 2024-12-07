@@ -652,7 +652,7 @@
     "osminedit": {
         "name": "OsmInEdit",
         "osmwiki": "OsmInEdit",
-        "github": "PanierAvide/osminedit",
+        "gitlab": "PanierAvide/osminedit",
         "url": "https://osminedit.pavie.info/",
         "hash": {
             "": "{{z}}/{{lat}}/{{lon}}/0"
