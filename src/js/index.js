@@ -12,6 +12,7 @@ let catLabels = {
   "qa": "QA Visualizations",
   "query": "Query Tools",
   "mapstyle": "Map Styles",
+  "mobile": "Mobile Apps",
   "router": "Routing Engines",
   "sister": "Sister Projects",
   "streetlevel": "Street-Level Imagery Sources",

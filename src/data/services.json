@@ -1373,6 +1373,16 @@
             }
         }
     },
+    "osmand": {
+        "name": "OsmAnd",
+        "osmwiki": "OsmAnd",
+        "github": "osmandapp/OsmAnd",
+        "url": "https://osmand.net/map/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}"
+        },
+        "cat": "platforms"
+    },
     "facilmap": {
         "name": "FacilMap",
         "osmwiki": "FacilMap",
@@ -1435,6 +1445,24 @@
                 }
             }
         }
+    },
+    "organicMaps": {
+        "name": "Organic Maps",
+        "osmwiki": "Organic_Maps",
+        "github": "organicmaps",
+        "url": "om://map",
+        "query": {
+            "v": "1",
+            "ll": "{{lat}},{{lon}}"
+        },
+        "cat": "mobile"
+    },
+    "magicEarth": {
+        "name": "Magic Earth",
+        "osmwiki": "Magic_Earth",
+        "url": "magicearth://",
+        "slug": "?show_on_map&lat={{lat}}&lon={{lon}}",
+        "cat": "mobile"
     },
     "openhistoricalmap": {
         "name": "OpenHistoricalMap",
