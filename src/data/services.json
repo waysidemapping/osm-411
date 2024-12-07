@@ -649,6 +649,16 @@
         },
         "cat": "indoor"
     },
+    "osminedit": {
+        "name": "OsmInEdit",
+        "osmwiki": "OsmInEdit",
+        "github": "PanierAvide/osminedit",
+        "url": "https://osminedit.pavie.info/",
+        "hash": {
+            "": "{{z}}/{{lat}}/{{lon}}/0"
+        },
+        "cat": "indoor"
+    },
     "overpass_turbo": {
         "name": "Overpass Turbo",
         "osmwiki": "Overpass_turbo",
@@ -1324,7 +1334,7 @@
         "cat": "carto"
     },
     "mapmatrix": {
-        "name": "MapMatrix",
+        "name": "MapMatrix by VeloPlanner",
         "github": "veloplanner/map-matrix",
         "url": "https://mapmatrix.veloplanner.com/",
         "hash": {
