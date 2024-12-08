@@ -128,8 +128,6 @@ function prepareServiceData() {
     for (let styleId in service.styles) {
       let child = service.styles[styleId];
       child.id = serviceId + '-' + styleId;
-      
-      child.parentName = service.name;
 
       // copy over any missing info from service to styles
       if (!child.url) child.url = service.url;
@@ -242,19 +240,19 @@ function reloadPage() {
       let service = services[i];
         
       html += `<li id="${service.id}" class="service">`;
-      html += `<span class="service-name">`;
+      html += `<div class="service-top">`;
+      html += `<div class="service-name">`;
       if (service.url) html += `<a href="${makeUrl(service)}" ${prefs.targetBlank ? 'target="_blank"' : ''}>`
       html += service.name;
-      html += `</span>`;
-      if (service.parentName) {
-        html += ' on ' + service.parentName;
-      }
       if (service.url) html += `</a>`;
-      html += `<span class="icon-links">`;
-      if (service.github) html += `<a href="https://github.com/${service.github}" target="_blank"><img src="img/github.svg"/></a>`;
-      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" target="_blank"><img src="img/gitlab.svg"/></a>`;
-      if (service.osmwiki) html += `<a href="https://wiki.openstreetmap.org/wiki/${service.osmwiki}" target="_blank"><img src="img/osmwiki.svg"/></a>`;
-      html += `</span>`;
+      html += `</div>`;
+
+      html += `<div class="icon-links">`;
+      if (service.github) html += `<a href="https://github.com/${service.github}" title="GitHub page" target="_blank"><img src="img/github.svg"/></a>`;
+      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" title="GitLab page" target="_blank"><img src="img/gitlab.svg"/></a>`;
+      if (service.osmwiki) html += `<a href="https://wiki.openstreetmap.org/wiki/${service.osmwiki}" title="OSM Wiki page" target="_blank"><img src="img/osmwiki.svg"/></a>`;
+      html += `</div>`;
+      html += `</div>`;
       if (service.styles) {
         html += '<ul class="styles">';
         for (let j in service.styles) {

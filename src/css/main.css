@@ -145,8 +145,9 @@ p {
   margin: 0 2px;
 }
 
-.icon-links {
-  float: right;
+.service-top {
+  display: flex;
+  justify-content: space-between;
 }
 .icon-links img {
   height: 16px;
