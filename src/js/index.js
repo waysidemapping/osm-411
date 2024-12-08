@@ -151,10 +151,14 @@ function makeUrl(definition) {
   function replaceTokens(val) {
     for (let paramKey in params) {
       let paramVal = params[paramKey];
-      if (typeof(paramVal) !== "undefined" && paramVal !== null) {
-        let token = '{{' + paramKey + '}}';
-        if (val.includes(token)) {
-          val = val.replaceAll(token, paramVal);
+      let regex = new RegExp('{{' + paramKey + '(?:\\|(.+?))?}}', "gi");
+      let results = regex.exec(val);
+      if (results !== null) {
+        let fallbackVal = results[1];
+        if (typeof(paramVal) !== "undefined" && paramVal !== null) {
+          val = val.replaceAll(regex, paramVal);
+        } else if (fallbackVal) {
+          val = val.replaceAll(regex, fallbackVal);
         }
       }
     }

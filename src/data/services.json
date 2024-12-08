@@ -363,7 +363,39 @@
         "hash": {
             "": "{{z}}/{{lat}}/{{lon}}"
         },
-        "cat": "thematic"
+        "cat": "thematic",
+        "styles": {
+            "P": {
+                "name": "Power",
+                "hash": {
+                    "": "{{z|3}}/{{lat|0}}/{{lon|0}}/L,P"
+                }
+            },
+            "S": {
+                "name": "Solar",
+                "hash": {
+                    "": "{{z|3}}/{{lat|0}}/{{lon|0}}/L,S"
+                }
+            },
+            "O": {
+                "name": "Oil & Gas",
+                "hash": {
+                    "": "{{z|3}}/{{lat|0}}/{{lon|0}}/L,O"
+                }
+            },
+            "T": {
+                "name": "Telecoms",
+                "hash": {
+                    "": "{{z|3}}/{{lat|0}}/{{lon|0}}/L,T"
+                }
+            },
+            "W": {
+                "name": "Water",
+                "hash": {
+                    "": "{{z|3}}/{{lat|0}}/{{lon|0}}/L,W"
+                }
+            }
+        }
     },
     "osm_wikidata_map": {
         "name": "OSM-Wikidata Map",
