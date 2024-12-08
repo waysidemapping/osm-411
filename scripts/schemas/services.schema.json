@@ -28,10 +28,16 @@
         "type": "string"
       },
       "hash": {
-        "type": "object"
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
       },
       "query": {
-        "type": "object"
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
       },
       "styles": {
         "title": "styles",
@@ -51,10 +57,16 @@
               "type": "string"
             },
             "hash": {
-              "type": "object"
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
             },
             "query": {
-              "type": "object"
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
             }
           },
           "additionalProperties": false
