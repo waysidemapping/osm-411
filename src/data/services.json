@@ -236,6 +236,17 @@
         },
         "cat": "thematic"
     },
+    "trailcatalog": {
+        "name": "Trailcatalog",
+        "github": "aschleck/trailcatalog",
+        "url": "https://trailcatalog.org/",
+        "query": {
+            "lat": "{{lat}}",
+            "lng": "{{lon}}",
+            "zoom": "{{z}}"
+        },
+        "cat": "thematic"
+    },
     "opencyclemap": {
         "name": "OpenCycleMap",
         "osmwiki": "OpenCycleMap",
