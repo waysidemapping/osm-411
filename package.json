@@ -3,11 +3,13 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "build": "rm -rf src/dist/ && mkdir -p src/dist/maplibre && cp -a node_modules/maplibre-gl/dist/. src/dist/maplibre/",
     "serve": "node ./scripts/serve.js",
     "validate": "node ./scripts/validate.js"
   },
   "devDependencies": {
-    "ajv": "^8.17.1"
+    "ajv": "^8.17.1",
+    "maplibre-gl": "^5.0.0"
   },
   "dependencies": {
   }

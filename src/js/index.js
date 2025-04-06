@@ -20,6 +20,7 @@ let catLabels = {
   "trail": "Trail Maps"
 };
 
+let map, navControl, geolocateControl;
 let allServices;
 const servicesByCat = {};
 
@@ -31,17 +32,59 @@ const prefs = {
   showVisited: false,
 }
 
-fetch('data/services.json')
-  .then(response => response.json())
-  .then(json => {
-    addEventListeners();
-    loadPrefsFromStorage();
-    loadParamsFromUrl();
+window.addEventListener('load', function() {
+  fetch('data/services.json')
+    .then(response => response.json())
+    .then(json => {
+      addEventListeners();
+      loadPrefsFromStorage();
+      loadParamsFromUrl();
 
-    allServices = json;
-    prepareServiceData();
+      allServices = json;
+      prepareServiceData();
+      reloadPage();
+    });
+});
+
+function initMap() {
+
+  map = new maplibregl.Map({
+    container: 'map',
+    hash: "map",
+    style: 'map/basemap.json',
+    center: [params.lat || 0, params.lon || 0],
+    zoom: params.z || 0,
+    minZoom: 0,
+    fadeDuration: 0,
+    keyboard: false
+  });
+
+  map.on('moveend', function() {
+    loadParamsFromUrl();
     reloadPage();
   });
+
+  navControl = new maplibregl.NavigationControl({
+    visualizePitch: true,
+    visualizeRoll: true,
+    showZoom: true,
+    showCompass: true
+  });
+
+  geolocateControl = new maplibregl.GeolocateControl({
+    positionOptions: {
+      enableHighAccuracy: true
+    },
+    trackUserLocation: true
+  });
+
+  let scaleControl = new maplibregl.ScaleControl({
+      maxWidth: 100,
+      unit: 'imperial'
+  });
+  map.addControl(scaleControl);
+
+}
 
 function getFilterValue() {
   return document.getElementById('filter')?.value || '';
@@ -53,6 +96,22 @@ function addEventListeners() {
   });
   document.getElementById('target-blank').addEventListener('change', function(e) {
     setPref('targetBlank', e.target.checked);
+  });
+  document.getElementById('edit-loc').addEventListener('click', function(e) {
+    e.preventDefault();
+    let mapWrap = document.getElementById('map-wrap');
+    if (!mapWrap.classList.contains('editing')) {
+      mapWrap.classList.add('editing');
+      map.keyboard.enable();
+      map.addControl(navControl);
+      map.addControl(geolocateControl);
+
+    } else {
+      mapWrap.classList.remove('editing');
+      map.keyboard.disable();
+      map.removeControl(navControl);
+      map.removeControl(geolocateControl);
+    }
   });
   document.getElementById('filter').addEventListener('focus', function(e) {
     e.target.select();
@@ -89,7 +148,7 @@ function writePrefsToStorage() {
 function mapParamsFromUrl() {
   let hashMap = hashValue('map');
   if (hashMap) {
-    let results = /^([\d\.]+)\/(-?[\d\.]+)\/(-?[\d\.]+)$/.exec(hashMap);
+    let results = /^([\d\.]+)\/(-?[\d\.]+)\/(-?[\d\.]+)/.exec(hashMap);
     if (results.length === 4) {
       let z = parseFloat(results[1]);
       let lat = parseFloat(results[2]);
@@ -210,10 +269,32 @@ function makeUrl(definition) {
 
 function reloadPage() {
 
+  let mapWrap = document.getElementById('map-wrap');
+
+  if (isNaN(params.lat) || isNaN(params.lon)) {
+    if (!mapWrap.classList.contains('no-loc')) {
+      mapWrap.classList.add('no-loc');
+    }
+    if (map) {
+      map.remove()
+      map = undefined;
+    }
+  } else {
+    if (!map) {
+      if (mapWrap.classList.contains('no-loc')) {
+        mapWrap.classList.remove('no-loc');
+      }
+      if (mapWrap.classList.contains('editing')) {
+        mapWrap.classList.remove('editing');
+      }
+      initMap();
+    }
+  }
+
   prefs.showVisited ? document.body.classList.add('show-visited') : document.body.classList.remove('show-visited');
 
   let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
-
+  
   if (params.z && params.lat && params.lon) {
     descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
   } else {

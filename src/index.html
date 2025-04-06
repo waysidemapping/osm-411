@@ -6,12 +6,20 @@
     <title>OSM 411</title>
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/maplibre/maplibre-gl.css" />
+    <script type="text/javascript" src="dist/maplibre/maplibre-gl.js"></script>
   </head>
   <body>
     <div id="container">
       <div id="header">
-        <h1>OSM 411</h1>
+        <h1><a href="#" style="color:inherit">OSM 411</a></h1>
         <div id="header-desc"></div>
+        <div id="map-wrap">
+          <div id="map"></div>
+          <div id="map-overlay"></div>
+          <button id="edit-loc"><span class="editing-on">🔒 Lock Location</span><span class="editing-off">📍 Edit Location</span></button>
+          <img class="crosshair editing-on" src="img/crosshair.svg"/>
+        </div>
         <div id="filter-wrap">
           <img src="img/search.svg"/>
           <input id="filter" type="search" placeholder="Filter links…" autofocus/>
