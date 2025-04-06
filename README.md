@@ -33,9 +33,10 @@ Not all projects are suitable for inclusion in OSM 411. We follow these general 
 ### Development setup
 1. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 2. Open your terminal and `cd` into the repo's directory
-3. Run `npm run serve` to start the development server
-4. Visit [http://localhost:411](http://localhost:411) in your browser
-5. That's it!
+3. Run `npm install` and `npm run build` (first time setup only)
+4. Run `npm run serve` to start the development server
+5. Visit [http://localhost:411](http://localhost:411) in your browser
+6. That's it!
 
 ### Code of conduct
 
