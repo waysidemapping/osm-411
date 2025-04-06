@@ -12,14 +12,18 @@
   <body>
     <div id="container">
       <div id="header">
-        <h1><a href="#" style="color:inherit">OSM 411</a></h1>
-        <div id="header-desc"></div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;">
+          <h1><a href="#" style="color:inherit">OSM 411</a></h1>
+          <div id="title-extra"></div>
+        </div>
         <div id="map-wrap">
           <div id="map"></div>
           <div id="map-overlay"></div>
           <button id="edit-loc"><span class="editing-on">🔒 Lock Location</span><span class="editing-off">📍 Edit Location</span></button>
           <img class="crosshair editing-on" src="img/crosshair.svg"/>
+          <button id="add-loc" class="map-off">📍 Add Location</button>
         </div>
+        <div id="header-desc"></div>
         <div id="filter-wrap">
           <img src="img/search.svg"/>
           <input id="filter" type="search" placeholder="Filter links…" autofocus/>

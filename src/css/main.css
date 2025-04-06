@@ -39,6 +39,17 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover, button:focus {
+  background: #eee;
+}
+
 #filter-wrap {
   position: relative;
 }
@@ -90,12 +101,12 @@ a:hover, a:focus {
 #map-wrap {
   position: relative;
   width: 100%;
+  margin-bottom: 24px;
 }
 #map {
   width: 100%;
   height: 200px;
   border-radius: 10px;
-  margin-bottom: 24px;
   border: 1px solid #ccc;
   pointer-events: none;
 }
@@ -122,19 +133,22 @@ a:hover, a:focus {
   position: absolute;
   left: 10px;
   top: 10px;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 4px 8px;
-  border-radius: 5px;
-}
-#edit-loc:hover {
-  background: #eee;
 }
 #map-wrap.editing #edit-loc {
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
 }
-#map-wrap.no-loc {
+#map-wrap.no-loc > *:not(.map-off) {
   display: none;
+}
+#map-wrap > .map-off {
+  display: none;
+}
+#map-wrap.no-loc > *.map-off {
+  display: unset;
+}
+#add-loc {
+  width: 100%;
+  padding: 10px;
 }
 .crosshair {
   width: 16px;
@@ -155,7 +169,7 @@ a:hover, a:focus {
 h1 {
   font-weight: bold;
   font-size: x-large;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 h2.section-name {

@@ -90,6 +90,21 @@ function getFilterValue() {
   return document.getElementById('filter')?.value || '';
 }
 
+function setEditing(toEditingState) {
+  let mapWrap = document.getElementById('map-wrap');
+  if (toEditingState) {
+    mapWrap.classList.add('editing');
+    map.keyboard.enable();
+    map.addControl(navControl);
+    map.addControl(geolocateControl);
+  } else {
+    mapWrap.classList.remove('editing');
+    map.keyboard.disable();
+    map.removeControl(navControl);
+    map.removeControl(geolocateControl);
+  }
+}
+
 function addEventListeners() {
   document.getElementById('show-visited').addEventListener('change', function(e) {
     setPref('showVisited', e.target.checked);
@@ -100,18 +115,15 @@ function addEventListeners() {
   document.getElementById('edit-loc').addEventListener('click', function(e) {
     e.preventDefault();
     let mapWrap = document.getElementById('map-wrap');
-    if (!mapWrap.classList.contains('editing')) {
-      mapWrap.classList.add('editing');
-      map.keyboard.enable();
-      map.addControl(navControl);
-      map.addControl(geolocateControl);
-
-    } else {
-      mapWrap.classList.remove('editing');
-      map.keyboard.disable();
-      map.removeControl(navControl);
-      map.removeControl(geolocateControl);
-    }
+    setEditing(!mapWrap.classList.contains('editing'))
+  });
+  document.getElementById('add-loc').addEventListener('click', function(e) {
+    e.preventDefault();
+    params.z = 0;
+    params.lat = 0;
+    params.lon = 0;
+    reloadPage();
+    setEditing(true);
   });
   document.getElementById('filter').addEventListener('focus', function(e) {
     e.target.select();
@@ -293,14 +305,12 @@ function reloadPage() {
 
   prefs.showVisited ? document.body.classList.add('show-visited') : document.body.classList.remove('show-visited');
 
-  let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
-  
   if (isFinite(params.z) && isFinite(params.lat) && isFinite(params.lon)) {
-    descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
+    document.getElementById('title-extra').innerHTML =`<p><code>#map=${params.z}/${params.lat}/${params.lon}</code></p>`; //<a href="#">Copy link</a>
   } else {
-    descHtml += `<p>You can set a common viewport with the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.9524/-75.1636">Example</a></p>`;
+    document.getElementById('title-extra').innerHTML = `<a href="#map=14/39.9524/-75.1636">Example</a>`;
   }
-  document.getElementById('header-desc').innerHTML = descHtml;
+  //document.getElementById('header-desc').innerHTML = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
 
   let html = "";
 
