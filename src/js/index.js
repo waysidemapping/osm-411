@@ -1,6 +1,6 @@
 let catLabels = {
   "3d": "3D",
-  "aerial": "Aerial Imagery Sources",
+  "aerial": "Aerial Imagery",
   "carto": "Cartography Inspectors",
   "changeset": "Changesets",
   "compare": "Map Comparisons",
@@ -15,7 +15,7 @@ let catLabels = {
   "mobile": "Mobile Apps",
   "router": "Routing Engines",
   "sister": "Sister Projects",
-  "streetlevel": "Street-Level Imagery Sources",
+  "streetlevel": "Street-Level Imagery",
   "thematic": "Thematic Viewers",
   "trail": "Trail Maps"
 };

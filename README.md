@@ -43,13 +43,13 @@ Be kind or be elsewhere :)
 
 ## FAQ
 
+### Why "411"?
+
+[4-1-1](https://en.wikipedia.org/wiki/411_(telephone_number)) has historically been the directory assistance phone number in the US and Canada. If you don't live in these countries, or you were born after 1995, you probably have no idea what this is. Basically, "what's the 411" means "give me the info".
+
 ### Why are commercial projects included?
 
 Commercial projects are major consumers of OpenStreetMap data. Mappers may want to add data specifically to see it appear in a specific app, even if it's closed-source or for-profit. Thus, it's useful to include commercial apps to compare how they're handling OSM data. Further, many companies and small businesses contribute tools, data, and resources back to the OSM community that are useful to mappers outside of a commercial context.
-
-### Why "411"?
-
-[4-1-1](https://en.wikipedia.org/wiki/411_(telephone_number)) has historically been the directory assistance phone number in the US and Canada. If you don't live in these countries or you're under 25 you probably have no idea what this is. Basically, "what's the 411" means "give me the info".
 
 ## License 
 
