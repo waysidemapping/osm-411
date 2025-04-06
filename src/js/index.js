@@ -295,7 +295,7 @@ function reloadPage() {
 
   let descHtml = `<p>This is a directory of links to <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap</a>-related projects.</p>`;
   
-  if (params.z && params.lat && params.lon) {
+  if (isFinite(params.z) && isFinite(params.lat) && isFinite(params.lon)) {
     descHtml += `<p>Pages will open at latitude <code>${params.lat}</code>, longitude <code>${params.lon}</code>, and zoom <code>${params.z}</code>. <a href="#">Clear</a></p>`;
   } else {
     descHtml += `<p>You can set a common viewport with the URL hash like <code>#map=zoom/lat/lon</code>. <a href="#map=14/39.9524/-75.1636">Example</a></p>`;
