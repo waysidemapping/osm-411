@@ -1,4 +1,4 @@
-# OSM 411
+# <img alt="OSM 411" src="src/img/osm411.svg" style="width: 120px;"/>
 
 [OSM 411](https://osm411.org) is a customizable directory of links to OpenStreetMap projects. At first glance it's just a big list, but by setting custom parameters, you can create a single page that allows opening the same context in a variety of different apps.
 
