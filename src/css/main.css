@@ -39,6 +39,12 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 24px 0;
+}
+
 button {
   background: white;
   border: 1px solid #ccc;
@@ -181,7 +187,7 @@ h2.section-name {
   background: #eee;
 }
 p {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .services {
@@ -225,15 +231,21 @@ p {
   height: 16px;
 }
 .icon-links a {
-  opacity: 0.65;
   margin-left: 4px;
 }
-.icon-links a:hover, .icon-links a:focus {
+a.faded-link {
+  opacity: 0.75;
+}
+a.faded-link:hover, a.faded-link:focus {
   opacity: 1;
 }
 
+#settings {
+  text-align: center;
+}
+
 #footer {
-  margin: 96px 12px 48px 12px;
+  margin: 24px 12px 24px 12px;
   text-align: center;
 }
 

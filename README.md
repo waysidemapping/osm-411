@@ -55,3 +55,5 @@ Commercial projects are major consumers of OpenStreetMap data. Mappers may want 
 ## License 
 
 OSM 411 uses the MIT license. See [LICENSE](/LICENSE).
+
+The Wayside Mapping logo is © Quincy Morgan and may not be reused without permission.

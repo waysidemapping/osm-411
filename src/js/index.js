@@ -343,9 +343,9 @@ function reloadPage() {
       html += `</div>`;
 
       html += `<div class="icon-links">`;
-      if (service.github) html += `<a href="https://github.com/${service.github}" title="GitHub page" target="_blank"><img src="img/github.svg"/></a>`;
-      if (service.gitlab) html += `<a href="https://gitlab.com/${service.gitlab}" title="GitLab page" target="_blank"><img src="img/gitlab.svg"/></a>`;
-      if (service.osmwiki) html += `<a href="https://wiki.openstreetmap.org/wiki/${service.osmwiki}" title="OSM Wiki page" target="_blank"><img src="img/osmwiki.svg"/></a>`;
+      if (service.github) html += `<a class="faded-link" href="https://github.com/${service.github}" title="GitHub page" target="_blank"><img src="img/github.svg"/></a>`;
+      if (service.gitlab) html += `<a class="faded-link" href="https://gitlab.com/${service.gitlab}" title="GitLab page" target="_blank"><img src="img/gitlab.svg"/></a>`;
+      if (service.osmwiki) html += `<a class="faded-link" href="https://wiki.openstreetmap.org/wiki/${service.osmwiki}" title="OSM Wiki page" target="_blank"><img src="img/osmwiki.svg"/></a>`;
       html += `</div>`;
       html += `</div>`;
       if (service.styles) {
