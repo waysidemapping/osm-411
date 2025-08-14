@@ -45,15 +45,20 @@ hr {
   margin: 24px 0;
 }
 
-button {
+button, a.button {
+  display: inline-block;
   background: white;
   border: 1px solid #ccc;
   padding: 4px 8px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 0.75em;
+  line-height: 1.4;
+  color: inherit;
 }
-button:hover, button:focus {
+button:hover, button:focus, a.button:hover, a.button:focus {
   background: #eee;
+  text-decoration: none;
 }
 
 #filter-wrap {
@@ -135,9 +140,16 @@ button:hover, button:focus {
 #map-wrap:not(.editing) .editing-on {
   display: none;
 }
-#edit-loc {
+#map-wrap .left, #map-wrap .right, #map-wrap .top {
   position: absolute;
+}
+#map-wrap .left {
   left: 10px;
+}
+#map-wrap .right {
+  right: 10px;
+}
+#map-wrap .top {
   top: 10px;
 }
 #map-wrap.editing #edit-loc {

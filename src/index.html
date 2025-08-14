@@ -25,13 +25,14 @@
             <svg role="img" aria-label="OSM 411" width="76px" height="44px" viewBox="0 0 38 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <path transform="translate(-11, -17)" fill="currentColor" d="M46,17 C47.6568542,17 49,18.3431458 49,20 L49,36 C49,37.6568542 47.6568542,39 46,39 L14,39 C12.3431458,39 11,37.6568542 11,36 L11,20 C11,18.3431458 12.3431458,17 14,17 L46,17 Z M46,19 L14,19 C13.4477153,19 13,19.4477153 13,20 L13,36 C13,36.5522847 13.4477153,37 14,37 L46,37 C46.5522847,37 47,36.5522847 47,36 L47,31 L29,31 L29,35 L27,35 L27,31 L20,31 L20,29 L27,21 L29,21 L29,29 L33,29 L33,23.5 L32,24.5 L31,24.5 L31,23 L33,21 L35,21 L35,29 L39,29 L39,23.5 L38,24.5 L37,24.5 L37,23 L39,21 L41,21 L41,29 L47,29 L47,20 C47,19.4477153 46.5522847,19 46,19 Z M16,31 L17,33 L18,31 L19,31 L19,35 L18,35 L18,33 L17,35 L16,33 L16,35 L15,35 L15,31 L16,31 Z M19,26 L19,27 L15.75,27 L19,28.25 L19,30 L15,30 L15,29 L18,29 L15,27.75 L15,26 L19,26 Z M27,24.037 L22.657,29 L27,29 L27,24.037 Z M19,21 L19,25 L15,25 L15,21 L19,21 Z M18,22 L16,22 L16,24 L18,24 L18,22 Z"></path>
             </svg>
-           </a></h1>
+          </a></h1>
           <div id="title-extra"></div>
         </div>
         <div id="map-wrap">
           <div id="map"></div>
           <div id="map-overlay"></div>
-          <button id="edit-loc"><span class="editing-on">🔒 Lock Location</span><span class="editing-off">📍 Edit Location</span></button>
+          <button id="edit-loc" class="top left"><span class="editing-on">🔒 Lock Location</span><span class="editing-off">📍 Edit Location</span></button>
+          <a class="button editing-off top right" href="#" id="clear-loc" title="Clear location"><span>✕</span></a>
           <img class="crosshair editing-on" src="img/crosshair.svg"/>
           <button id="add-loc" class="map-off">📍 Add Location</button>
         </div>
