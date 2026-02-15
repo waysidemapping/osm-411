@@ -1516,7 +1516,6 @@
         "name": "Magic Earth",
         "osmwiki": "Magic_Earth",
         "url": "https://www.magicearth.com/",
-        "slug": "?show_on_map&lat={{lat}}&lon={{lon}}",
         "cat": "mobile"
     },
     "openhistoricalmap": {
