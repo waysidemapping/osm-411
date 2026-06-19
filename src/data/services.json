@@ -1503,18 +1503,19 @@
         "name": "Organic Maps",
         "osmwiki": "Organic_Maps",
         "github": "organicmaps",
-        "url": "om://map",
-        "query": {
-            "v": "1",
-            "ll": "{{lat}},{{lon}}"
-        },
+        "url": "https://organicmaps.app/",
+        "cat": "mobile"
+    },
+    "coMaps": {
+        "name": "CoMaps",
+        "osmwiki": "CoMaps",
+        "url": "https://www.comaps.app/",
         "cat": "mobile"
     },
     "magicEarth": {
         "name": "Magic Earth",
         "osmwiki": "Magic_Earth",
-        "url": "magicearth://",
-        "slug": "?show_on_map&lat={{lat}}&lon={{lon}}",
+        "url": "https://www.magicearth.com/",
         "cat": "mobile"
     },
     "openhistoricalmap": {
