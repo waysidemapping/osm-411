@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "ajv": "^8.17.1",
-    "maplibre-gl": "^5.0.0"
+    "maplibre-gl": "^6.11.2"
   },
   "dependencies": {
   }
